@@ -6,7 +6,7 @@
   <link href="http://lwt235.github.io/atom.xml" rel="self"/>
   
   <link href="http://lwt235.github.io/"/>
-  <updated>2023-08-20T04:42:36.436Z</updated>
+  <updated>2023-08-20T10:46:16.506Z</updated>
   <id>http://lwt235.github.io/</id>
   
   <author>
@@ -15,6 +15,25 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Test Post</title>
+    <link href="http://lwt235.github.io/2023/08/20/Test-Post/"/>
+    <id>http://lwt235.github.io/2023/08/20/Test-Post/</id>
+    <published>2023-08-20T10:43:42.000Z</published>
+    <updated>2023-08-20T10:46:16.506Z</updated>
+    
+    
+    
+    
+    <category term="测试页面" scheme="http://lwt235.github.io/categories/%E6%B5%8B%E8%AF%95%E9%A1%B5%E9%9D%A2/"/>
+    
+    
+    <category term="测试1" scheme="http://lwt235.github.io/tags/%E6%B5%8B%E8%AF%951/"/>
+    
+    <category term="测试2" scheme="http://lwt235.github.io/tags/%E6%B5%8B%E8%AF%952/"/>
+    
+  </entry>
   
   <entry>
     <title>Hello World</title>

@@ -6,7 +6,7 @@
   <link href="http://lwt235.github.io/atom.xml" rel="self"/>
   
   <link href="http://lwt235.github.io/"/>
-  <updated>2023-08-20T10:46:16.506Z</updated>
+  <updated>2023-08-21T01:50:15.216Z</updated>
   <id>http://lwt235.github.io/</id>
   
   <author>
@@ -17,41 +17,26 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>Test Post</title>
-    <link href="http://lwt235.github.io/2023/08/20/Test-Post/"/>
-    <id>http://lwt235.github.io/2023/08/20/Test-Post/</id>
+    <title>欢迎</title>
+    <link href="http://lwt235.github.io/2023/08/20/Welcome/"/>
+    <id>http://lwt235.github.io/2023/08/20/Welcome/</id>
     <published>2023-08-20T10:43:42.000Z</published>
-    <updated>2023-08-20T10:46:16.506Z</updated>
+    <updated>2023-08-21T01:50:15.216Z</updated>
     
-    
-    
-    
-    <category term="测试页面" scheme="http://lwt235.github.io/categories/%E6%B5%8B%E8%AF%95%E9%A1%B5%E9%9D%A2/"/>
-    
-    
-    <category term="测试1" scheme="http://lwt235.github.io/tags/%E6%B5%8B%E8%AF%951/"/>
-    
-    <category term="测试2" scheme="http://lwt235.github.io/tags/%E6%B5%8B%E8%AF%952/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Hello World</title>
-    <link href="http://lwt235.github.io/2023/08/19/hello-world/"/>
-    <id>http://lwt235.github.io/2023/08/19/hello-world/</id>
-    <published>2023-08-19T08:16:52.845Z</published>
-    <updated>2023-08-20T04:42:36.436Z</updated>
-    
-    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>]]></content>
+    <content type="html"><![CDATA[<h1 id="欢迎访问我的博客"><a href="#欢迎访问我的博客" class="headerlink" title="欢迎访问我的博客"></a>欢迎访问我的博客</h1><h2 id="在这里我将分享以下内容："><a href="#在这里我将分享以下内容：" class="headerlink" title="在这里我将分享以下内容："></a>在这里我将分享以下内容：</h2><ul><li>有关编程的心得</li><li>开发中遇到的问题</li><li>一些学科的知识归纳<br>……  </li></ul><hr><p>希望我的博客能为饱受困扰的你解决问题  </p><p><div style="text-align:right;">本篇博客撰写于2023/8/21</p>]]></content>
     
     
       
       
-    <summary type="html">&lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.io/docs/&quot;&gt;documentation&lt;/a&gt; for</summary>
+    <summary type="html">&lt;h1 id=&quot;欢迎访问我的博客&quot;&gt;&lt;a href=&quot;#欢迎访问我的博客&quot; class=&quot;headerlink&quot; title=&quot;欢迎访问我的博客&quot;&gt;&lt;/a&gt;欢迎访问我的博客&lt;/h1&gt;&lt;h2 id=&quot;在这里我将分享以下内容：&quot;&gt;&lt;a href=&quot;#在这里我将分享以下内容：&quot; cla</summary>
       
     
     
     
+    <category term="欢迎" scheme="http://lwt235.github.io/categories/%E6%AC%A2%E8%BF%8E/"/>
+    
+    
+    <category term="欢迎" scheme="http://lwt235.github.io/tags/%E6%AC%A2%E8%BF%8E/"/>
     
   </entry>
   

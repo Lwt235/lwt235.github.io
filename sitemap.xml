@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://lwt235.github.io/2023/08/21/Git/</loc>
+    
+    <lastmod>2023-08-21</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>http://lwt235.github.io/2023/08/20/Welcome/</loc>
     
     <lastmod>2023-08-21</lastmod>
@@ -53,10 +62,24 @@
     <priority>0.2</priority>
   </url>
   
+  <url>
+    <loc>http://lwt235.github.io/tags/Git/</loc>
+    <lastmod>2023-08-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
 
   
   <url>
     <loc>http://lwt235.github.io/categories/%E6%AC%A2%E8%BF%8E/</loc>
+    <lastmod>2023-08-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://lwt235.github.io/categories/Git/</loc>
     <lastmod>2023-08-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>

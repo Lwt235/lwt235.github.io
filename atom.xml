@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>Lwt&#39;s Blog</title>
   
-  
+  <subtitle>lwt235.github.io</subtitle>
   <link href="http://lwt235.github.io/atom.xml" rel="self"/>
   
   <link href="http://lwt235.github.io/"/>

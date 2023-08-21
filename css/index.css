@@ -4314,6 +4314,29 @@ mjx-assistive-mml {
     display: none;
   }
 }
+[data-theme="dark"] #web_bg {
+  background: url(https://s1.ax1x.com/2023/08/21/pPG2o2n.jpg);
+  background-attachment: local;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+@media screen and (max-width: 800px) {
+  #web_bg {
+    background: url(https://s1.ax1x.com/2023/08/21/pPGyVeg.jpg) !important;
+    background-attachment: local !important;
+    background-position: center !important;
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
+  }
+  [data-theme="dark"] #web_bg {
+    background: url(https://s1.ax1x.com/2023/08/21/pPG2o2n.jpg) !important;
+    background-attachment: local !important;
+    background-position: center !important;
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
+  }
+}
 #article-container .btn-center {
   margin: 0 0 20px;
   text-align: center;

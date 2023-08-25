@@ -2,7 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://www.lwt-server.cn/2023/08/24/LeetCode/</loc>
+    <loc>https://www.lwt-server.cn/2023/08/25/LeetCode_2/</loc>
+    
+    <lastmod>2023-08-25</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.lwt-server.cn/2023/08/24/LeetCode_1/</loc>
     
     <lastmod>2023-08-25</lastmod>
     

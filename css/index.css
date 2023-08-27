@@ -4541,14 +4541,14 @@ mjx-assistive-mml {
 }
 @media screen and (max-width: 800px) {
   #web_bg {
-    background: url(https://s1.ax1x.com/2023/08/21/pPGyVeg.jpg) !important;
+    background: url(/images/morning.jpg) !important;
     background-attachment: local !important;
     background-position: center !important;
     background-size: cover !important;
     background-repeat: no-repeat !important;
   }
   [data-theme="dark"] #web_bg {
-    background: url(https://s1.ax1x.com/2023/08/21/pPG2o2n.jpg) !important;
+    background: url(/images/night.jpg) !important;
     background-attachment: local !important;
     background-position: center !important;
     background-size: cover !important;

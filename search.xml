@@ -4,7 +4,57 @@
   
     
     <entry>
-      <title>LeetCode题解——10. 正则表达式匹配</title>
+      <title>LeetCode题解——12.整数转罗马数字</title>
+      <link href="/2023/08/28/LeetCode_12/"/>
+      <url>/2023/08/28/LeetCode_12/</url>
+      
+        <content type="html"><![CDATA[<h1 id="leetcode题解">LeetCode题解</h1><h2 id="盛最多水的容器">盛最多水的容器</h2><h3 id="题目预览">题目预览：</h3><p>罗马数字包含以下七种字符： <span class="math inline">\(I\)</span>，<span class="math inline">\(V\)</span>， <spanclass="math inline">\(X\)</span>， <spanclass="math inline">\(L\)</span>，<spanclass="math inline">\(C\)</span>，<span class="math inline">\(D\)</span>和 <span class="math inline">\(M\)</span>。</p><table><thead><tr class="header"><th style="text-align: center;">字符</th><th style="text-align: center;">数值</th></tr></thead><tbody><tr class="odd"><td style="text-align: center;">I</td><td style="text-align: center;">1</td></tr><tr class="even"><td style="text-align: center;">V</td><td style="text-align: center;">5</td></tr><tr class="odd"><td style="text-align: center;">X</td><td style="text-align: center;">10</td></tr><tr class="even"><td style="text-align: center;">L</td><td style="text-align: center;">50</td></tr><tr class="odd"><td style="text-align: center;">C</td><td style="text-align: center;">100</td></tr><tr class="even"><td style="text-align: center;">D</td><td style="text-align: center;">500</td></tr><tr class="odd"><td style="text-align: center;">M</td><td style="text-align: center;">1000</td></tr></tbody></table><p>例如， 罗马数字 <span class="math inline">\(2\)</span> 写做 <spanclass="math inline">\(II\)</span> ，即为两个并列的 <spanclass="math inline">\(1\)</span>。<spanclass="math inline">\(12\)</span> 写做 <spanclass="math inline">\(XII\)</span> ，即为 <span class="math inline">\(X+ II\)</span> 。 <span class="math inline">\(27\)</span> 写做 <spanclass="math inline">\(XXVII\)</span>, 即为 <spanclass="math inline">\(XX + V + II\)</span> 。</p><p>通常情况下，罗马数字中小的数字在大的数字的右边。但也存在特例，例如<span class="math inline">\(4\)</span> 不写做 <spanclass="math inline">\(IIII\)</span>，而是 <spanclass="math inline">\(IV\)</span>。数字 <spanclass="math inline">\(1\)</span> 在数字 <spanclass="math inline">\(5\)</span> 的左边，所表示的数等于大数 <spanclass="math inline">\(5\)</span> 减小数 <spanclass="math inline">\(1\)</span> 得到的数值 <spanclass="math inline">\(4\)</span> 。同样地，数字 <spanclass="math inline">\(9\)</span> 表示为 <spanclass="math inline">\(IX\)</span>。这个特殊的规则只适用于以下六种情况：</p><ul><li><p><span class="math inline">\(I\)</span> 可以放在 <spanclass="math inline">\(V\ (5)\)</span> 和 <span class="math inline">\(X\(10)\)</span> 的左边，来表示 <span class="math inline">\(4\)</span> 和<span class="math inline">\(9\)</span>。</p></li><li><p><span class="math inline">\(X\)</span> 可以放在 <spanclass="math inline">\(L\ (50)\)</span> 和 <span class="math inline">\(C\(100)\)</span> 的左边，来表示 <span class="math inline">\(40\)</span> 和<span class="math inline">\(90\)</span>。</p></li><li><p><span class="math inline">\(C\)</span> 可以放在 <spanclass="math inline">\(D\ (500)\)</span> 和 <spanclass="math inline">\(M\ (1000)\)</span> 的左边，来表示 <spanclass="math inline">\(400\)</span> 和 <spanclass="math inline">\(900\)</span>。</p></li></ul><p>给你一个整数，将其转为罗马数字。</p><h4 id="示例-1">示例 1:</h4><p><b>输入:</b> num = 3 <b>输出:</b> "III"</p><h4 id="示例-2">示例 2:</h4><p><b>输入:</b> num = 4 <b>输出:</b> "IV"</p><h4 id="示例-3">示例 3:</h4><p><b>输入:</b> num = 9 <b>输出:</b> "IX"</p><h4 id="示例-4">示例 4:</h4><p><b>输入:</b> num = 58 <b>输出:</b> "LVIII" <b>解释:</b> L = 50, V =5, III = 3.</p><h4 id="示例-5">示例 5:</h4><p><b>输入:</b> num = 1994 <b>输出:</b> "MCMXCIV" <b>解释:</b> M = 1000,CM = 900, XC = 90, IV = 4.</p><p>提示：</p><ul><li><span class="math inline">\(1 &lt;= num &lt;= 3999\)</span></li></ul><hr /><p>以下是题解：</p><h3 id="解题思路模拟">解题思路:模拟：</h3><p>按照题意，优先满足大数对应的转换可以保证答案正确，剩下的只是简单的模拟：</p><p>代码如下：</p><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function">string <span class="title">intToRoman</span><span class="params">(<span class="type">int</span> num)</span> </span>&#123;</span><br><span class="line">        string ans;</span><br><span class="line">        <span class="keyword">while</span>(num&gt;<span class="number">0</span>)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">if</span>(num<span class="number">-1000</span>&gt;=<span class="number">0</span>)</span><br><span class="line">            &#123;</span><br><span class="line">                num-=<span class="number">1000</span>;</span><br><span class="line">                ans+=<span class="string">&#x27;M&#x27;</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">else</span> <span class="keyword">if</span>(num<span class="number">-900</span>&gt;=<span class="number">0</span>)</span><br><span class="line">            &#123;</span><br><span class="line">                num-=<span class="number">900</span>;</span><br><span class="line">                ans+=<span class="string">&quot;CM&quot;</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">else</span> <span class="keyword">if</span>(num<span class="number">-500</span>&gt;=<span class="number">0</span>)</span><br><span class="line">            &#123;</span><br><span class="line">                num-=<span class="number">500</span>;</span><br><span class="line">                ans+=<span class="string">&quot;D&quot;</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">else</span> <span class="keyword">if</span>(num<span class="number">-400</span>&gt;=<span class="number">0</span>)</span><br><span class="line">            &#123;</span><br><span class="line">                num-=<span class="number">400</span>;</span><br><span class="line">                ans+=<span class="string">&quot;CD&quot;</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">else</span> <span class="keyword">if</span>(num<span class="number">-100</span>&gt;=<span class="number">0</span>)</span><br><span class="line">            &#123;</span><br><span class="line">                num-=<span class="number">100</span>;</span><br><span class="line">                ans+=<span class="string">&quot;C&quot;</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">else</span> <span class="keyword">if</span>(num<span class="number">-90</span>&gt;=<span class="number">0</span>)</span><br><span class="line">            &#123;</span><br><span class="line">                num-=<span class="number">90</span>;</span><br><span class="line">                ans+=<span class="string">&quot;XC&quot;</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">else</span> <span class="keyword">if</span>(num<span class="number">-50</span>&gt;=<span class="number">0</span>)</span><br><span class="line">            &#123;</span><br><span class="line">                num-=<span class="number">50</span>;</span><br><span class="line">                ans+=<span class="string">&quot;L&quot;</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">else</span> <span class="keyword">if</span>(num<span class="number">-40</span>&gt;=<span class="number">0</span>)</span><br><span class="line">            &#123;</span><br><span class="line">                num-=<span class="number">40</span>;</span><br><span class="line">                ans+=<span class="string">&quot;XL&quot;</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">else</span> <span class="keyword">if</span>(num<span class="number">-10</span>&gt;=<span class="number">0</span>)</span><br><span class="line">            &#123;</span><br><span class="line">                num-=<span class="number">10</span>;</span><br><span class="line">                ans+=<span class="string">&quot;X&quot;</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">else</span> <span class="keyword">if</span>(num<span class="number">-9</span>&gt;=<span class="number">0</span>)</span><br><span class="line">            &#123;</span><br><span class="line">                num-=<span class="number">9</span>;</span><br><span class="line">                ans+=<span class="string">&quot;IX&quot;</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">else</span> <span class="keyword">if</span>(num<span class="number">-5</span>&gt;=<span class="number">0</span>)</span><br><span class="line">            &#123;</span><br><span class="line">                num-=<span class="number">5</span>;</span><br><span class="line">                ans+=<span class="string">&quot;V&quot;</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">else</span> <span class="keyword">if</span>(num<span class="number">-4</span>&gt;=<span class="number">0</span>)</span><br><span class="line">            &#123;</span><br><span class="line">                num-=<span class="number">4</span>;</span><br><span class="line">                ans+=<span class="string">&quot;IV&quot;</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">else</span></span><br><span class="line">            &#123;</span><br><span class="line">                num-=<span class="number">1</span>;</span><br><span class="line">                ans+=<span class="string">&quot;I&quot;</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> ans;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure><h4 id="结果">结果：</h4><p><a href="https://imgse.com/i/pPaKb6A"><imgsrc="https://s1.ax1x.com/2023/08/28/pPaKb6A.png"alt="pPaKb6A.png" /></a></p><div style="text-align:right;"><p>本篇博客撰写于2023/8/28 17:13:06</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 程序 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> LeetCode题解 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>LeetCode题解——11.盛最多水的容器</title>
+      <link href="/2023/08/28/LeetCode_11/"/>
+      <url>/2023/08/28/LeetCode_11/</url>
+      
+        <content type="html"><![CDATA[<h1 id="leetcode题解">LeetCode题解</h1><h2 id="盛最多水的容器">盛最多水的容器</h2><h3 id="题目预览">题目预览：</h3><p>给定一个长度为 <span class="math inline">\(n\)</span> 的整数数组<span class="math inline">\(height\)</span> 。有 <spanclass="math inline">\(n\)</span> 条垂线，第 <spanclass="math inline">\(i\)</span> 条线的两个端点是 <spanclass="math inline">\((i, 0)\)</span> 和 <span class="math inline">\((i,height[i])\)</span> 。</p><p>找出其中的两条线，使得它们与 <span class="math inline">\(x\)</span>轴共同构成的容器可以容纳最多的水。</p><p>返回容器可以储存的最大水量。</p><p>说明：你不能倾斜容器。</p><h4 id="示例-1">示例 1：</h4><p><a href="https://imgse.com/i/pPaK5FO"><imgsrc="https://s1.ax1x.com/2023/08/28/pPaK5FO.jpg"alt="pPaK5FO.jpg" /></a></p><blockquote><p><b>输入：</b>[1,8,6,2,5,4,8,3,7]<br /><b>输出：</b>49<br /><b>解释：</b>图中垂直线代表输入数组[1,8,6,2,5,4,8,3,7]。在此情况下，容器能够容纳水（表示为蓝色部分）的最大值为49。</p></blockquote><h4 id="示例-2">示例 2：</h4><blockquote><p><b>输入：</b>height = [1,1]<br /><b>输出：</b>1</p></blockquote><p>提示：</p><ul><li><p><span class="math inline">\(n == height.length\)</span></p></li><li><p><span class="math inline">\(2 &lt;= n &lt;= 105\)</span></p></li><li><p><span class="math inline">\(0 &lt;= height[i] &lt;=10^4\)</span></p></li></ul><hr /><p>以下是题解：</p><h3 id="解题思路双指针法">解题思路:双指针法：</h3><ol type="1"><li>定义两个分别指向容器两端的指针；<br /></li><li>依次向内收缩对应高度最短的一边；<br /></li><li>更新最大值；<br /></li><li>重复上述 <span class="math inline">\(2 , 3\)</span>步骤直到两个指针相遇。</li></ol><p>代码如下：</p><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line"><span class="keyword">public</span>: </span><br><span class="line">    <span class="function"><span class="type">int</span> <span class="title">maxArea</span><span class="params">(vector&lt;<span class="type">int</span>&gt;&amp; height)</span> </span>&#123;</span><br><span class="line">        <span class="type">int</span> ans=<span class="number">0</span>,Left=<span class="number">0</span>,Right=height.<span class="built_in">size</span>()<span class="number">-1</span>;</span><br><span class="line">        <span class="keyword">while</span>(Left&lt;Right)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="type">int</span> Len=Right-Left;</span><br><span class="line">            ans=<span class="built_in">max</span>(ans,<span class="built_in">min</span>(height[Left],height[Right])*Len);</span><br><span class="line">            <span class="keyword">if</span>(height[Left]&gt;height[Right])</span><br><span class="line">                Right--;</span><br><span class="line">            <span class="keyword">else</span></span><br><span class="line">                Left++;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> ans;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure><h4 id="结果">结果</h4><p><a href="https://imgse.com/i/pPaKofe"><imgsrc="https://s1.ax1x.com/2023/08/28/pPaKofe.png"alt="pPaKofe.png" /></a></p><div style="text-align:right;"><p>本篇博客撰写于2023/8/28 17:12:55</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 程序 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> LeetCode题解 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>LeetCode题解——10.正则表达式匹配</title>
       <link href="/2023/08/28/LeetCode_10/"/>
       <url>/2023/08/28/LeetCode_10/</url>
       
@@ -29,7 +79,7 @@
     
     
     <entry>
-      <title>LeetCode题解——9.  回文数</title>
+      <title>LeetCode题解——9.回文数</title>
       <link href="/2023/08/28/LeetCode_9/"/>
       <url>/2023/08/28/LeetCode_9/</url>
       
@@ -79,7 +129,7 @@
     
     
     <entry>
-      <title>LeetCode题解——8. 字符串转换整数 (atoi)</title>
+      <title>LeetCode题解——8.字符串转换整数 (atoi)</title>
       <link href="/2023/08/27/LeetCode_8/"/>
       <url>/2023/08/27/LeetCode_8/</url>
       
@@ -104,7 +154,7 @@
     
     
     <entry>
-      <title>LeetCode题解——7. 整数反转</title>
+      <title>LeetCode题解——7.整数反转</title>
       <link href="/2023/08/27/LeetCode_7/"/>
       <url>/2023/08/27/LeetCode_7/</url>
       
@@ -204,7 +254,7 @@
     
     
     <entry>
-      <title>LeetCode题解——5. 最长回文子串</title>
+      <title>LeetCode题解——5.最长回文子串</title>
       <link href="/2023/08/26/LeetCode_5/"/>
       <url>/2023/08/26/LeetCode_5/</url>
       
@@ -229,7 +279,7 @@
     
     
     <entry>
-      <title>LeetCode题解——4. 寻找两个正序数组的中位数</title>
+      <title>LeetCode题解——4.寻找两个正序数组的中位数</title>
       <link href="/2023/08/26/LeetCode_4/"/>
       <url>/2023/08/26/LeetCode_4/</url>
       

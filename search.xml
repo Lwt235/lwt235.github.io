@@ -4,6 +4,33 @@
   
     
     <entry>
+      <title>LeetCode题解——823.带因子的二叉树</title>
+      <link href="/2023/08/29/LeetCode_823/"/>
+      <url>/2023/08/29/LeetCode_823/</url>
+      
+        <content type="html"><![CDATA[<h1 id="leetcode题解">LeetCode题解</h1><h2 id="带因子的二叉树">带因子的二叉树</h2><h3 id="题目预览">题目预览：</h3><p>给出一个含有不重复整数元素的数组 <spanclass="math inline">\(arr\)</span> ，每个整数 <spanclass="math inline">\(arr[i]\)</span> 均大于 <spanclass="math inline">\(1\)</span>。</p><p>用这些整数来构建二叉树，每个整数可以使用任意次数。其中：每个非叶结点的值应等于它的两个子结点的值的乘积。</p><p>满足条件的二叉树一共有多少个？答案可能很大，返回 <b>对 <spanclass="math inline">\(10^9 + 7\)</span> 取余</b> 的结果。</p><h4 id="示例-1">示例 1:</h4><blockquote><p><b>输入:</b> arr = [2, 4]<br /><b>输出:</b> 3<br /><b>解释:</b> 可以得到这些二叉树: [2], [4], [4, 2, 2]</p></blockquote><h4 id="示例-2">示例 2:</h4><blockquote><p><b>输入:</b> arr = [2, 4, 5, 10]<br /><b>输出:</b> 7<br /><b>解释:</b> 可以得到这些二叉树: [2], [4], [5], [10], [4, 2, 2], [10, 2,5], [10, 5, 2].</p></blockquote><p>提示：</p><ul><li><p><span class="math inline">\(1 &lt;= arr.length &lt;=1000\)</span></p></li><li><p><span class="math inline">\(2 &lt;= arr[i] &lt;=10^9\)</span></p></li><li><p><span class="math inline">\(arr\)</span> 中的所有值<b>互不相同</b></p></li></ul><hr /><p>以下是题解：</p><h3 id="思路-递推">思路: 递推</h3><p>对于每个根节点，由题意可以确定其值一定大于它的任意一个子节点，因此我们可以先将容器按<b>升序</b> 排序，然后依次计算其中的数据：</p><ul><li><p>我们可以直接停止构建，此时二叉树只有一个根节点，这算 <spanclass="math inline">\(1\)</span> 个方案。</p></li><li><p>记 <span class="math inline">\(val=arr[i]\)</span> 。枚举 <spanclass="math inline">\(x=arr[j]\)</span> ，如果 <spanclass="math inline">\(val\)</span> 能被 <spanclass="math inline">\(x\)</span> 整除且 <spanclass="math inline">\(\frac{val}{x}\)</span> 在 <spanclass="math inline">\(arr\)</span> 中（设其下标为 <spanclass="math inline">\(k\)</span>），那么分解 <spanclass="math inline">\(val=x×\frac{val}{x}\)</span> ，方案数等于 <spanclass="math inline">\(f[j]×f[k]\)</span> 。</p></li><li><p>把这些方案数全部加起来，就得到了 <spanclass="math inline">\(f[i]\)</span> 。</p></li><li><p>由于 <span class="math inline">\(j&lt;i\)</span> 且 <spanclass="math inline">\(k&lt;i\)</span> ，我们要从小到大遍历计算每个状态<span class="math inline">\(f[i]\)</span> 。</p></li></ul><p>初始值：所有 <span class="math inline">\(f[i]\)</span> 都初始化成<span class="math inline">\(1\)</span> 。</p><p>答案为: <span class="math inline">\(\sum_{n-1}^{i=0}f[i]\)</span></p><p>代码如下:</p><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="type">int</span> <span class="title">numFactoredBinaryTrees</span><span class="params">(vector&lt;<span class="type">int</span>&gt;&amp; arr)</span> </span>&#123;</span><br><span class="line">        <span class="type">const</span> <span class="type">int</span> Mod=<span class="number">1e9</span>+<span class="number">7</span>;</span><br><span class="line">        <span class="built_in">sort</span>(arr.<span class="built_in">begin</span>(),arr.<span class="built_in">end</span>());</span><br><span class="line">        <span class="type">int</span> Len=arr.<span class="built_in">size</span>();</span><br><span class="line">        unordered_map&lt;<span class="type">int</span>,<span class="type">int</span>&gt; idx;</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>;i&lt;Len;i++)</span><br><span class="line">        &#123;</span><br><span class="line">            idx[arr[i]]=i;</span><br><span class="line">        &#125;</span><br><span class="line">        vector&lt;<span class="type">long</span> <span class="type">long</span>&gt;<span class="built_in">f</span>(Len,<span class="number">1</span>);</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>;i&lt;Len;i++)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="type">int</span> val=arr[i];</span><br><span class="line">            <span class="keyword">for</span>(<span class="type">int</span> j=<span class="number">0</span>;j&lt;i;j++)</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="type">int</span> tmp=arr[j];</span><br><span class="line">                <span class="keyword">if</span>(val%tmp==<span class="number">0</span>&amp;&amp;idx.<span class="built_in">count</span>(val/tmp))</span><br><span class="line">                    f[i]+=f[j]*f[idx[val/tmp]];</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="built_in">accumulate</span>(f.<span class="built_in">begin</span>(),f.<span class="built_in">end</span>(),<span class="number">0LL</span>)%Mod;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure><h4 id="结果">结果</h4><p><a href="https://imgse.com/i/pPaHwDK"><imgsrc="https://s1.ax1x.com/2023/08/29/pPaHwDK.png"alt="pPaHwDK.png" /></a></p><div style="text-align:right;"><p>本篇博客撰写于2023/8/29 13:06:24</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 程序 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> LeetCode题解 </tag>
+            
+            <tag> LeetCode每日一题 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>LeetCode题解——15.三数之和</title>
       <link href="/2023/08/29/LeetCode_15/"/>
       <url>/2023/08/29/LeetCode_15/</url>
@@ -197,6 +224,8 @@
             
             <tag> LeetCode题解 </tag>
             
+            <tag> LeetCode每日一题 </tag>
+            
         </tags>
       
     </entry>
@@ -297,6 +326,8 @@
             
             <tag> LeetCode题解 </tag>
             
+            <tag> LeetCode每日一题 </tag>
+            
         </tags>
       
     </entry>
@@ -321,6 +352,8 @@
         <tags>
             
             <tag> LeetCode题解 </tag>
+            
+            <tag> LeetCode每日一题 </tag>
             
         </tags>
       

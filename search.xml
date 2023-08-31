@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>LeetCode题解——22.括号生成</title>
+      <link href="/2023/08/31/LeetCode_22/"/>
+      <url>/2023/08/31/LeetCode_22/</url>
+      
+        <content type="html"><![CDATA[<h1 id="leetcode题解">LeetCode题解</h1><h2 id="括号生成">括号生成</h2><h3 id="题目预览">题目预览：</h3><p>数字 n代表生成括号的对数，请你设计一个函数，用于能够生成所有可能的并且 有效的括号组合。</p><h4 id="示例-1">示例 1：</h4><blockquote><p><b>输入：</b>n = 3<b>输出：</b>["((()))","(()())","(())()","()(())","()()()"]</p></blockquote><h4 id="示例-2">示例 2：</h4><blockquote><p><b>输入：</b>n = 1 <b>输出：</b>["()"]</p></blockquote><p>提示：</p><ul><li><span class="math inline">\(1 &lt;= n &lt;= 8\)</span></li></ul><hr /><p>以下是题解：</p><h3 id="解题思路">解题思路:</h3><p>本题可以通过记录左、右括号的个数来通过递归实现合法序列的求解。</p><p>代码如下：</p><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    vector&lt;string&gt; ans;</span><br><span class="line">    <span class="function"><span class="type">void</span> <span class="title">Dfs</span><span class="params">(string str,<span class="type">int</span> left,<span class="type">int</span> right)</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(left==<span class="number">0</span>&amp;&amp;right==<span class="number">0</span>)</span><br><span class="line">        &#123;</span><br><span class="line">            ans.<span class="built_in">push_back</span>(str);</span><br><span class="line">            <span class="keyword">return</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span>(left==right) <span class="comment">//剩余左括号与右括号相等，只能使用左括号</span></span><br><span class="line">            <span class="built_in">Dfs</span>(str+<span class="string">&#x27;(&#x27;</span>,left<span class="number">-1</span>,right);</span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">if</span>(left&gt;<span class="number">0</span>)  <span class="comment">//剩余左括号小于右括号，可以使用右括号或左括号</span></span><br><span class="line">                <span class="built_in">Dfs</span>(str+<span class="string">&#x27;(&#x27;</span>,left<span class="number">-1</span>,right);</span><br><span class="line">            <span class="built_in">Dfs</span>(str+<span class="string">&#x27;)&#x27;</span>,left,right<span class="number">-1</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function">vector&lt;string&gt; <span class="title">generateParenthesis</span><span class="params">(<span class="type">int</span> n)</span> </span>&#123;</span><br><span class="line">        <span class="built_in">Dfs</span>(<span class="string">&quot;&quot;</span>,n,n);</span><br><span class="line">        <span class="keyword">return</span> ans;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure><h4 id="结果">结果</h4><p><a href="https://imgse.com/i/pPwXzge"><imgsrc="https://s1.ax1x.com/2023/08/31/pPwXzge.png"alt="pPwXzge.png" /></a></p><div style="text-align:right;"><p>本篇博客撰写于2023/8/31 18:31:21</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 程序 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> LeetCode题解 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>LeetCode题解——21.合并两个有序链表</title>
       <link href="/2023/08/31/LeetCode_21/"/>
       <url>/2023/08/31/LeetCode_21/</url>

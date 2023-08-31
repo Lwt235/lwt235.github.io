@@ -55,7 +55,7 @@
   isHome: true,
   isHighlightShrink: false,
   isToc: false,
-  postUpdate: '2023-08-31 17:30:12'
+  postUpdate: '2023-08-31 17:35:27'
 }</script><noscript><style type="text/css">
   #nav {
     opacity: 1
@@ -201,232 +201,360 @@ document.addEventListener('pjax:send', () => {
     background-size: cover!important;
     background-repeat: no-repeat!important;
   }
-  </style></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/images/avatar.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">30</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">4</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">3</div></a></div><hr class="custom-hr"/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/comments/"><i class="fa-fw fas fa-envelope-open"></i><span> 留言板</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div></div></div></div><div class="page" id="body-wrap"><header class="full_page" id="page-header"><nav id="nav"><span id="blog-info"><a href="/" title="Lwt's Blog"><span class="site-name">Lwt's Blog</span></a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search" href="javascript:void(0);"><i class="fas fa-search fa-fw"></i></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/comments/"><i class="fa-fw fas fa-envelope-open"></i><span> 留言板</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="site-info"><h1 id="site-title">Lwt's Blog</h1><div id="site-subtitle"><span id="subtitle"></span></div><div id="site_social_icons"><a class="social-icon" href="https://github.com/Lwt235" target="_blank" title="Github"><i class="fab fa-github" style="color: #24292e;"></i></a><a class="social-icon" href="mailto:378092251@qq.com" target="_blank" title="Email"><i class="fas fa-envelope" style="color: #4a7dbe;"></i></a></div></div><div id="scroll-down"><i class="fas fa-angle-down scroll-down-effects"></i></div></header><main class="layout" id="content-inner"><div class="recent-posts" id="recent-posts"><div class="recent-post-item"><div class="post_cover left"><a href="/2023/08/31/LeetCode_21/" title="LeetCode题解——21.合并两个有序链表"><img class="post-bg" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/../images/LeetCode.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="LeetCode题解——21.合并两个有序链表"></a></div><div class="recent-post-info"><a class="article-title" href="/2023/08/31/LeetCode_21/" title="LeetCode题解——21.合并两个有序链表">LeetCode题解——21.合并两个有序链表</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2023-08-31T09:20:34.000Z" title="发表于 2023-08-31 17:20:34">2023-08-31</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E7%A8%8B%E5%BA%8F/">程序</a></span><span class="article-meta tags"><span class="article-meta-separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/LeetCode%E9%A2%98%E8%A7%A3/">LeetCode题解</a></span></div><div class="content">LeetCode题解合并两个有序链表题目预览：将两个升序链表合并为一个新的 升序 链表并返回。新链表是通过拼接给定的两个链表的所有节点组成的。 
+  </style></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/images/avatar.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">30</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">4</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">3</div></a></div><hr class="custom-hr"/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/comments/"><i class="fa-fw fas fa-envelope-open"></i><span> 留言板</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div></div></div></div><div class="page" id="body-wrap"><header class="full_page" id="page-header"><nav id="nav"><span id="blog-info"><a href="/" title="Lwt's Blog"><span class="site-name">Lwt's Blog</span></a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search" href="javascript:void(0);"><i class="fas fa-search fa-fw"></i></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/comments/"><i class="fa-fw fas fa-envelope-open"></i><span> 留言板</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="site-info"><h1 id="site-title">Lwt's Blog</h1><div id="site-subtitle"><span id="subtitle"></span></div><div id="site_social_icons"><a class="social-icon" href="https://github.com/Lwt235" target="_blank" title="Github"><i class="fab fa-github" style="color: #24292e;"></i></a><a class="social-icon" href="mailto:378092251@qq.com" target="_blank" title="Email"><i class="fas fa-envelope" style="color: #4a7dbe;"></i></a></div></div><div id="scroll-down"><i class="fas fa-angle-down scroll-down-effects"></i></div></header><main class="layout" id="content-inner"><div class="recent-posts" id="recent-posts"><div class="recent-post-item"><div class="post_cover left"><a href="/2023/08/31/LeetCode_21/" title="LeetCode题解——21.合并两个有序链表"><img class="post-bg" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/../images/LeetCode.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="LeetCode题解——21.合并两个有序链表"></a></div><div class="recent-post-info"><a class="article-title" href="/2023/08/31/LeetCode_21/" title="LeetCode题解——21.合并两个有序链表">LeetCode题解——21.合并两个有序链表</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2023-08-31T09:20:34.000Z" title="发表于 2023-08-31 17:20:34">2023-08-31</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E7%A8%8B%E5%BA%8F/">程序</a></span><span class="article-meta tags"><span class="article-meta-separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/LeetCode%E9%A2%98%E8%A7%A3/">LeetCode题解</a></span></div><div class="content">LeetCode题解
+合并两个有序链表
+题目预览：
+将两个升序链表合并为一个新的 升序
+链表并返回。新链表是通过拼接给定的两个链表的所有节点组成的。
 
 示例 1：
-输入：l1 = [1,2,4], l2 = [1,3,4]输出：[1,1,2,3,4,4]  
+
+输入：l1 = [1,2,4], l2 = [1,3,4]
+输出：[1,1,2,3,4,4]
 
 示例 2：
-输入：l1 = [], l2 = []输出：[]  
+
+输入：l1 = [], l2 = []
+输出：[]
 
 示例 3：
-输入：l1 = [], l2 = [0]输出：[0]  
+
+输入：l1 = [], l2 = [0]
+输出：[0]
 
 提示：
 
-两个链表的节点数目范围是 $[0, 50]$  
-
-$-100 &lt;= Node.val &lt;= 100$
-
-$l1$ 和 $l2$ 均按 非递减顺序 排列
-
+两个链表的节点数目范围是 \([0,
+50]\)
+\(-100 &lt;= Node.val &lt;=
+100\)
+\(l1\) 和 \(l2\) 均按 非递减顺序 排列
 
 
 以下是题解：
-解题思路:这题是很经典的题型，算法流程可参考归并排序，对于任意两个 升序 的容器，我们只需依次从两个容器取出较小的数，直至其中一个或二者均为空。
+解题思路:
+这题是很经典的题型，算法流程可参考归并排序，对于任意两个 升序
+的容器，我们只需依次从两个容器取出较小的数，直至其中一个或二者均为空。
 代码如下：
-1234567891011121314151617181920212223class Solution &#123;public:    ListNode* mergeTwoLists(ListNode* list1, ListNode* list ...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/2023/08/31/LeetCode_20/" title="LeetCode题解——20.有效的括号"><img class="post-bg" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/../images/LeetCode.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="LeetCode题解——20.有效的括号"></a></div><div class="recent-post-info"><a class="article-title" href="/2023/08/31/LeetCode_20/" title="LeetCode题解——20.有效的括号">LeetCode题解——20.有效的括号</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2023-08-31T04:28:43.000Z" title="发表于 2023-08-31 12:28:43">2023-08-31</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E7%A8%8B%E5%BA%8F/">程序</a></span><span class="article-meta tags"><span class="article-meta-separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/LeetCode%E9%A2%98%E8%A7%A3/">LeetCode题解</a></span></div><div class="content">LeetCode题解有效的括号题目预览：给定一个只包括 &#39;(&#39;，&#39;)&#39;，&#39;&#123;&#39;，&#39;&#125;&#39;，&#39;[&#39;，&#39;]&#39; 的字符串 $s$ ，判断字符串是否有效。
+1234567891011121314151617181920212223class Solution &#123;public:    ListNode* merg ...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/2023/08/31/LeetCode_20/" title="LeetCode题解——20.有效的括号"><img class="post-bg" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/../images/LeetCode.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="LeetCode题解——20.有效的括号"></a></div><div class="recent-post-info"><a class="article-title" href="/2023/08/31/LeetCode_20/" title="LeetCode题解——20.有效的括号">LeetCode题解——20.有效的括号</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2023-08-31T04:28:43.000Z" title="发表于 2023-08-31 12:28:43">2023-08-31</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E7%A8%8B%E5%BA%8F/">程序</a></span><span class="article-meta tags"><span class="article-meta-separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/LeetCode%E9%A2%98%E8%A7%A3/">LeetCode题解</a></span></div><div class="content">LeetCode题解
+有效的括号
+题目预览：
+给定一个只包括
+'('，')'，'&#123;'，'&#125;'，'['，']'
+的字符串 \(s\)
+，判断字符串是否有效。
 有效字符串需满足：
 
 左括号必须用相同类型的右括号闭合。
-
 左括号必须以正确的顺序闭合。
-
 每个右括号都有一个对应的相同类型的左括号。
 
-
 示例 1：
-输入：s = “()”输出：true  
+
+输入：s = "()"
+输出：true
 
 示例 2：
-输入：s = “()[]{}”输出：true  
+
+输入：s = "()"
+输出：true
 
 示例 3：
-输入：s = “(]”输出：false  
+
+输入：s = "(]"
+输出：false
 
 提示：
 
-$1 &lt;= s.length &lt;= 10^4$
-
-$s$ 仅由括号 &#39;()[]&#123;&#125;&#39; 组成
-
+\(1 &lt;= s.length &lt;=
+10^4\)
+\(s\) 仅由括号
+'()[]&#123;&#125;' 组成
 
 
 以下是题解：
-解题思路:拿到题，很多人应该和我一样想：如果计算出左括号的数量，和右括号的数量，如果每种括号左右数量相同，会不会就是有效的括号了呢？
-事实上不是的，假如输入是 [&#123;]&#125;，每种括号的左右数量分别相等，但不是有效的括号。这是因为结果还 ...</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/2023/08/31/LeetCode_19/" title="LeetCode题解——19.删除链表的倒数第 N 个结点"><img class="post-bg" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/../images/LeetCode.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="LeetCode题解——19.删除链表的倒数第 N 个结点"></a></div><div class="recent-post-info"><a class="article-title" href="/2023/08/31/LeetCode_19/" title="LeetCode题解——19.删除链表的倒数第 N 个结点">LeetCode题解——19.删除链表的倒数第 N 个结点</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2023-08-31T02:49:57.000Z" title="发表于 2023-08-31 10:49:57">2023-08-31</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E7%A8%8B%E5%BA%8F/">程序</a></span><span class="article-meta tags"><span class="article-meta-separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/LeetCode%E9%A2%98%E8%A7%A3/">LeetCode题解</a></span></div><div class="content">LeetCode题解删除链表的倒数第 N 个结点题目预览：给你一个链表，删除链表的倒数第 n 个结点，并且返回链表的头结点。
+解题思路:
+拿到题，很多人应该和我一样想：如果计算出左括号的数量，和右括号的数量，如果每种括号左右数量相同，会不会就是有效的括号了呢？
+事实上不是的，假如输入是
+[&#123;]&#125;，每种括号的左右数量分别相等，但不是有效的括号。这是因为结果还与括号的位置有关。
+而我们能 ...</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/2023/08/31/LeetCode_19/" title="LeetCode题解——19.删除链表的倒数第 N 个结点"><img class="post-bg" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/../images/LeetCode.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="LeetCode题解——19.删除链表的倒数第 N 个结点"></a></div><div class="recent-post-info"><a class="article-title" href="/2023/08/31/LeetCode_19/" title="LeetCode题解——19.删除链表的倒数第 N 个结点">LeetCode题解——19.删除链表的倒数第 N 个结点</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2023-08-31T02:49:57.000Z" title="发表于 2023-08-31 10:49:57">2023-08-31</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E7%A8%8B%E5%BA%8F/">程序</a></span><span class="article-meta tags"><span class="article-meta-separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/LeetCode%E9%A2%98%E8%A7%A3/">LeetCode题解</a></span></div><div class="content">LeetCode题解
+删除链表的倒数第 N 个结点
+题目预览：
+给你一个链表，删除链表的倒数第 n 个结点，并且返回链表的头结点。
 
 示例 1：
-输入：head = [1,2,3,4,5], n = 2输出：[1,2,3,5]  
+
+输入：head = [1,2,3,4,5], n = 2
+输出：[1,2,3,5]
 
 示例 2：
-输入：head = [1], n = 1输出：[]  
+
+输入：head = [1], n = 1
+输出：[]
 
 示例 3：
-输入：head = [1,2], n = 1输出：[1]  
+
+输入：head = [1,2], n = 1
+输出：[1]
 
 提示：
 
-链表中结点的数目为 $sz$
-
-$1 &lt;= sz &lt;= 30$
-
-$0 &lt;= Node.val &lt;= 100$
-
-$1 &lt;= n &lt;= sz$
-
+链表中结点的数目为 \(sz\)
+\(1 &lt;= sz &lt;= 30\)
+\(0 &lt;= Node.val &lt;=
+100\)
+\(1 &lt;= n &lt;= sz\)
 
 进阶：你能尝试使用一趟扫描实现吗？
 
 以下是题解：
-解题思路:本题与我在(LeetCode_2)中的部分题解高度重合，这里就不再多做赘述，附上修改后的代码，其中进阶部分可以通过双指针——即间隔n个单位的两个指针，当后面的那个到达末端，前面那个既是我们要删去的数。
+解题思路:
+本题与我在(LeetCode_2)中的部分题解高度重合，这里就不再多做赘述，附上修改后的代码，其中进阶部分可以通过双指针——即间隔n个单位的两个指针，当后面的那个到达末端，前面那个既是我们要删去的数。
 代码如下：
-1234567891011121314151617181920212223242526272829class Solution &#123;public:  ...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/2023/08/31/LeetCode_1761/" title="LeetCode题解——1761.一个图中连通三元组的最小度数"><img class="post-bg" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/../images/LeetCode.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="LeetCode题解——1761.一个图中连通三元组的最小度数"></a></div><div class="recent-post-info"><a class="article-title" href="/2023/08/31/LeetCode_1761/" title="LeetCode题解——1761.一个图中连通三元组的最小度数">LeetCode题解——1761.一个图中连通三元组的最小度数</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2023-08-31T02:09:24.000Z" title="发表于 2023-08-31 10:09:24">2023-08-31</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E7%A8%8B%E5%BA%8F/">程序</a></span><span class="article-meta tags"><span class="article-meta-separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/LeetCode%E9%A2%98%E8%A7%A3/">LeetCode题解</a><span class="article-meta-link">•</span><a class="article-meta__tags" href="/tags/LeetCode%E6%AF%8F%E6%97%A5%E4%B8%80%E9%A2%98/">LeetCode每日一题</a></span></div><div class="content">LeetCode题解一个图中连通三元组的最小度数题目预览：给你一个无向图，整数 $n$ 表示图中节点的数目，$edges$ 数组表示图中的边，其中 $edges[i] = [ui, vi]$ ，表示 $ui$ 和 $vi$ 之间有一条无向边。
-一个 连通三元组 指的是 三个 节点组成的集合且这三个点之间 两两 有边。
-连通三元组的度数 是所有满足此条件的边的数目：一个顶点在这个三元组内，而另一个顶点不在这个三元组内。
-请你返回所有连通三元组中度数的 最小值 ，如果图中没有连通三元组，那么返回 $-1$ 。
+123456789101112131415161718192021222 ...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/2023/08/31/LeetCode_1761/" title="LeetCode题解——1761.一个图中连通三元组的最小度数"><img class="post-bg" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/../images/LeetCode.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="LeetCode题解——1761.一个图中连通三元组的最小度数"></a></div><div class="recent-post-info"><a class="article-title" href="/2023/08/31/LeetCode_1761/" title="LeetCode题解——1761.一个图中连通三元组的最小度数">LeetCode题解——1761.一个图中连通三元组的最小度数</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2023-08-31T02:09:24.000Z" title="发表于 2023-08-31 10:09:24">2023-08-31</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E7%A8%8B%E5%BA%8F/">程序</a></span><span class="article-meta tags"><span class="article-meta-separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/LeetCode%E9%A2%98%E8%A7%A3/">LeetCode题解</a><span class="article-meta-link">•</span><a class="article-meta__tags" href="/tags/LeetCode%E6%AF%8F%E6%97%A5%E4%B8%80%E9%A2%98/">LeetCode每日一题</a></span></div><div class="content">LeetCode题解
+一个图中连通三元组的最小度数
+题目预览：
+给你一个无向图，整数 \(n\)
+表示图中节点的数目，\(edges\)
+数组表示图中的边，其中 \(edges[i] = [ui,
+vi]\) ，表示 \(ui\) 和 \(vi\) 之间有一条无向边。
+一个 连通三元组 指的是 三个
+节点组成的集合且这三个点之间 两两 有边。
+连通三元组的度数
+是所有满足此条件的边的数目：一个顶点在这个三元组内，而另一个顶点不在这个三元组内。
+请你返回所有连通三元组中度数的 最小值
+，如果图中没有连通三元组，那么返回 \(-1\) 。
 示例 1：
 
-输入：n = 6, edges = [[1,2],[1,3],[3,2],[4,1],[5,2],[3,6]]输出：3解释：只有一个三元组 [1,2,3] 。构成度数的边在上图中已被加粗。
+
+输入：n = 6, edges =
+[[1,2],[1,3],[3,2],[4,1],[5,2],[3,6]]
+输出：3
+解释：只有一个三元组 [1,2,3] 。构成度数的边在上图中已被加粗。
 
 示例 2：
 
-输入：n = 7, edges = [[1,3],[4,1],[4,3],[2,5],[5,6],[6,7],[7,5],[2,6]]输出：0解释：有 3 个三元组：    1) [1,4,3]，度数为 0 。    2) [2,5,6]，度数为 2 。    3)  ...</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/2023/08/30/LeetCode_18/" title="LeetCode题解——18.四数之和"><img class="post-bg" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/../images/LeetCode.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="LeetCode题解——18.四数之和"></a></div><div class="recent-post-info"><a class="article-title" href="/2023/08/30/LeetCode_18/" title="LeetCode题解——18.四数之和">LeetCode题解——18.四数之和</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2023-08-30T14:45:26.000Z" title="发表于 2023-08-30 22:45:26">2023-08-30</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E7%A8%8B%E5%BA%8F/">程序</a></span><span class="article-meta tags"><span class="article-meta-separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/LeetCode%E9%A2%98%E8%A7%A3/">LeetCode题解</a></span></div><div class="content">LeetCode题解四数之和题目预览：给你一个由 $n$ 个整数组成的数组 $nums$ ，和一个目标值 $target$ 。请你找出并返回满足下述全部条件且不重复的四元组 $[nums[a], nums[b], nums[c], nums[d]]$ （若两个四元组元素一一对应，则认为两个四元组重复）：
 
-$0 &lt;= a, b, c, d &lt; n$
+输入：n = 7, edges =
+[[1,3],[4,1],[4,3],[2,5],[5,6],[6,7],[7,5],[2,6]]
+输出：0
+解释：有 3 个三元组：
+1 ...</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/2023/08/30/LeetCode_18/" title="LeetCode题解——18.四数之和"><img class="post-bg" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/../images/LeetCode.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="LeetCode题解——18.四数之和"></a></div><div class="recent-post-info"><a class="article-title" href="/2023/08/30/LeetCode_18/" title="LeetCode题解——18.四数之和">LeetCode题解——18.四数之和</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2023-08-30T14:45:26.000Z" title="发表于 2023-08-30 22:45:26">2023-08-30</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E7%A8%8B%E5%BA%8F/">程序</a></span><span class="article-meta tags"><span class="article-meta-separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/LeetCode%E9%A2%98%E8%A7%A3/">LeetCode题解</a></span></div><div class="content">LeetCode题解
+四数之和
+题目预览：
+给你一个由 \(n\) 个整数组成的数组
+\(nums\) ，和一个目标值 \(target\)
+。请你找出并返回满足下述全部条件且不重复的四元组 \([nums[a], nums[b], nums[c], nums[d]]\)
+（若两个四元组元素一一对应，则认为两个四元组重复）：
 
-$a$ 、$b$ 、$c$ 和 $d$ 互不相同
-
-$nums[a] + nums[b] + nums[c] + nums[d] == target$
-
+\(0 &lt;= a, b, c, d &lt;
+n\)
+\(a\) 、\(b\) 、\(c\) 和 \(d\) 互不相同
+\(nums[a] + nums[b] + nums[c] + nums[d]
+== target\)
 
 你可以按 任意顺序 返回答案 。
 示例 1：
-输入：nums = [1,0,-1,0,-2,2], target = 0输出：[[-2,-1,1,2],[-2,0,0,2],[-1,0,0,1]]
+
+输入：nums = [1,0,-1,0,-2,2], target = 0
+输出：[[-2,-1,1,2],[-2,0,0,2],[-1,0,0,1]]
 
 示例 2：
-输入：nums = [2,2,2,2,2], target = 8输出：[[2,2,2,2]]
+
+输入：nums = [2,2,2,2,2], target = 8
+输出：[[2,2,2,2]]
 
 提示：
 
-$1 &lt;= nums.length &lt;= 200$
-
-$-10^9 &lt;= nums[i] &lt;= 10^9$
-
-$-10^9 &lt;= ...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/2023/08/30/LeetCode_17/" title="LeetCode题解——17.电话号码的字母组合"><img class="post-bg" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/../images/LeetCode.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="LeetCode题解——17.电话号码的字母组合"></a></div><div class="recent-post-info"><a class="article-title" href="/2023/08/30/LeetCode_17/" title="LeetCode题解——17.电话号码的字母组合">LeetCode题解——17.电话号码的字母组合</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2023-08-30T09:32:15.000Z" title="发表于 2023-08-30 17:32:15">2023-08-30</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E7%A8%8B%E5%BA%8F/">程序</a></span><span class="article-meta tags"><span class="article-meta-separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/LeetCode%E9%A2%98%E8%A7%A3/">LeetCode题解</a></span></div><div class="content">LeetCode题解最接近的三数之和题目预览：给定一个仅包含数字 $2-9$ 的字符串，返回所有它能表示的字母组合。答案可以按 任意顺序 返回。
-给出数字到字母的映射如下（与电话按键相同）。注意 $1$ 不对应任何字母。
+\(1 &lt;= nums.length &lt;= ...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/2023/08/30/LeetCode_17/" title="LeetCode题解——17.电话号码的字母组合"><img class="post-bg" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/../images/LeetCode.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="LeetCode题解——17.电话号码的字母组合"></a></div><div class="recent-post-info"><a class="article-title" href="/2023/08/30/LeetCode_17/" title="LeetCode题解——17.电话号码的字母组合">LeetCode题解——17.电话号码的字母组合</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2023-08-30T09:32:15.000Z" title="发表于 2023-08-30 17:32:15">2023-08-30</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E7%A8%8B%E5%BA%8F/">程序</a></span><span class="article-meta tags"><span class="article-meta-separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/LeetCode%E9%A2%98%E8%A7%A3/">LeetCode题解</a></span></div><div class="content">LeetCode题解
+最接近的三数之和
+题目预览：
+给定一个仅包含数字 \(2-9\)
+的字符串，返回所有它能表示的字母组合。答案可以按 任意顺序
+返回。
+给出数字到字母的映射如下（与电话按键相同）。注意 \(1\) 不对应任何字母。
 
 示例 1：
-输入：digits = “23”输出：[“ad”,”ae”,”af”,”bd”,”be”,”bf”,”cd”,”ce”,”cf”]  
+
+输入：digits = "23"
+输出：["ad","ae","af","bd","be","bf","cd","ce","cf"]
 
 示例 2：
-输入：digits = “”输出：[]  
+
+输入：digits = ""
+输出：[]
 
 示例 3：
-输入：digits = “2”输出：[“a”,”b”,”c”]  
+
+输入：digits = "2"
+输出：["a","b","c"]
 
 提示：
 
-$0 &lt;= digits.length &lt;= 4$
-$digits[i]$ 是范围 $[‘2’, ‘9’]$ 的一个数字。
+\(0 &lt;= digits.length &lt;=
+4\)
+\(digits[i]\) 是范围 \([&#39;2&#39;, &#39;9&#39;]\)
+的一个数字。
 
 
 以下是题解：
-解题思路:递归本题思路较清晰，对于每一位数字，均有与之相对应的 $3/4$ 种情况，我们只需递归每一种状态即可。
+解题思路:递归
+本题思路较清晰，对于每一位数字，均有与之相对应的 \(3/4\)
+种情况，我们只需递归每一种状态即可。
 代码如下：
-12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849class Sol ...</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/2023/08/30/LeetCode_1654/" title="LeetCode题解——1654.到家的最少跳跃次数"><img class="post-bg" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/../images/LeetCode.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="LeetCode题解——1654.到家的最少跳跃次数"></a></div><div class="recent-post-info"><a class="article-title" href="/2023/08/30/LeetCode_1654/" title="LeetCode题解——1654.到家的最少跳跃次数">LeetCode题解——1654.到家的最少跳跃次数</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2023-08-30T07:17:06.000Z" title="发表于 2023-08-30 15:17:06">2023-08-30</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E7%A8%8B%E5%BA%8F/">程序</a></span><span class="article-meta tags"><span class="article-meta-separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/LeetCode%E9%A2%98%E8%A7%A3/">LeetCode题解</a><span class="article-meta-link">•</span><a class="article-meta__tags" href="/tags/LeetCode%E6%AF%8F%E6%97%A5%E4%B8%80%E9%A2%98/">LeetCode每日一题</a></span></div><div class="content">LeetCode题解到家的最少跳跃次数题目预览：有一只跳蚤的家在数轴上的位置 $x$ 处。请你帮助它从位置 $0$ 出发，到达它的家。
+123456789101112131415161718192 ...</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/2023/08/30/LeetCode_1654/" title="LeetCode题解——1654.到家的最少跳跃次数"><img class="post-bg" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/../images/LeetCode.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="LeetCode题解——1654.到家的最少跳跃次数"></a></div><div class="recent-post-info"><a class="article-title" href="/2023/08/30/LeetCode_1654/" title="LeetCode题解——1654.到家的最少跳跃次数">LeetCode题解——1654.到家的最少跳跃次数</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2023-08-30T07:17:06.000Z" title="发表于 2023-08-30 15:17:06">2023-08-30</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E7%A8%8B%E5%BA%8F/">程序</a></span><span class="article-meta tags"><span class="article-meta-separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/LeetCode%E9%A2%98%E8%A7%A3/">LeetCode题解</a><span class="article-meta-link">•</span><a class="article-meta__tags" href="/tags/LeetCode%E6%AF%8F%E6%97%A5%E4%B8%80%E9%A2%98/">LeetCode每日一题</a></span></div><div class="content">LeetCode题解
+到家的最少跳跃次数
+题目预览：
+有一只跳蚤的家在数轴上的位置 \(x\)
+处。请你帮助它从位置 \(0\)
+出发，到达它的家。
 跳蚤跳跃的规则如下：
 
-它可以 往前 跳恰好 $a$ 个位置（即往右跳）。  
-它可以 往后 跳恰好 $b$ 个位置（即往左跳）。
-它不能 连续 往后跳 $2$ 次。
-它不能跳到任何 $forbidden$ 数组中的位置。
-跳蚤可以往前跳 超过 它的家的位置，但是它 不能跳到负整数 的位置。
+它可以 往前 跳恰好 \(a\)
+个位置（即往右跳）。
 
-给你一个整数数组 forbidden ，其中 forbidden[i] 是跳蚤不能跳到的位置，同时给你整数 a， b 和 x ，请你返回跳蚤到家的最少跳跃次数。如果没有恰好到达 x 的可行方案，请你返回 -1 。
+它可以 往后 跳恰好 \(b\)
+个位置（即往左跳）。
+它不能 连续 往后跳 \(2\)
+次。
+它不能跳到任何 \(forbidden\)
+数组中的位置。
+跳蚤可以往前跳 超过 它的家的位置，但是它
+不能跳到负整数 的位置。
+
+给你一个整数数组 forbidden ，其中 forbidden[i]
+是跳蚤不能跳到的位置，同时给你整数 a， b 和 x
+，请你返回跳蚤到家的最少跳跃次数。如果没有恰好到达 x
+的可行方案，请你返回 -1 。
 示例 1：
-输入：forbidden = [14,4,18,1,15], a = 3, b = 15, x = 9输出：3解释：往前跳 3 次（0 -&gt; 3 -&gt; 6 -&gt; 9），跳蚤就到家了。  
+
+输入：forbidden = [14,4,18,1,15], a = 3, b = 15, x = 9
+输出：3
+解释：往前跳 3 次（0 -&gt; 3 -&gt; 6 -&gt;
+9），跳蚤就到家了。
 
 示例 2：
-输入：forbidden = [8,3,16,6,12,20], a = 15, b = 13, x = 11输出：-1  ...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/2023/08/29/LeetCode_16/" title="LeetCode题解——16.最接近的三数之和"><img class="post-bg" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/../images/LeetCode.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="LeetCode题解——16.最接近的三数之和"></a></div><div class="recent-post-info"><a class="article-title" href="/2023/08/29/LeetCode_16/" title="LeetCode题解——16.最接近的三数之和">LeetCode题解——16.最接近的三数之和</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2023-08-29T14:10:55.000Z" title="发表于 2023-08-29 22:10:55">2023-08-29</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E7%A8%8B%E5%BA%8F/">程序</a></span><span class="article-meta tags"><span class="article-meta-separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/LeetCode%E9%A2%98%E8%A7%A3/">LeetCode题解</a></span></div><div class="content">LeetCode题解最接近的三数之和题目预览：给你一个长度为 $n$ 的整数数组 $nums$ 和 一个目标值 $target$。请你从 $nums$ 中选出三个整数，使它们的和与 $target$ 最接近。
+
+输入：forbidden ...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/2023/08/29/LeetCode_16/" title="LeetCode题解——16.最接近的三数之和"><img class="post-bg" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/../images/LeetCode.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="LeetCode题解——16.最接近的三数之和"></a></div><div class="recent-post-info"><a class="article-title" href="/2023/08/29/LeetCode_16/" title="LeetCode题解——16.最接近的三数之和">LeetCode题解——16.最接近的三数之和</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2023-08-29T14:10:55.000Z" title="发表于 2023-08-29 22:10:55">2023-08-29</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E7%A8%8B%E5%BA%8F/">程序</a></span><span class="article-meta tags"><span class="article-meta-separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/LeetCode%E9%A2%98%E8%A7%A3/">LeetCode题解</a></span></div><div class="content">LeetCode题解
+最接近的三数之和
+题目预览：
+给你一个长度为 \(n\) 的整数数组
+\(nums\) 和 一个目标值 \(target\)。请你从 \(nums\) 中选出三个整数，使它们的和与 \(target\) 最接近。
 返回这三个数的和。
 假定每组输入只存在恰好一个解。
 示例 1：
-输入：nums = [-1,2,1,-4], target = 1输出：2解释：与 target 最接近的和是 2 (-1 + 2 + 1 = 2) 。  
+
+输入：nums = [-1,2,1,-4], target = 1
+输出：2
+解释：与 target 最接近的和是 2 (-1 + 2 + 1 = 2) 。
 
 示例 2：
-输入：nums = [0,0,0], target = 1输出：0  
+
+输入：nums = [0,0,0], target = 1
+输出：0
 
 提示：
 
-$3 &lt;= nums.length &lt;= 1000$
-
-$-1000 &lt;= nums[i] &lt;= 1000$
-
-$-10^4 &lt;= target &lt;= 10^4$
-
+\(3 &lt;= nums.length &lt;=
+1000\)
+\(-1000 &lt;= nums[i] &lt;=
+1000\)
+\(-10^4 &lt;= target &lt;=
+10^4\)
 
 
 以下是题解：
-解题思路:排序 + 双指针
+解题思路:
+排序 + 双指针
 基本思路与前一题(LeetCode_15)类似
 除此以外，还有以下几个优化：
-设 $s=nums[i]+nums[i+1]+nums[i+2]$ 。如果 $s&gt;target$ ，由于数组已经排序，后面无论怎么选，选出 ...</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/2023/08/29/LeetCode_823/" title="LeetCode题解——823.带因子的二叉树"><img class="post-bg" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/../images/LeetCode.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="LeetCode题解——823.带因子的二叉树"></a></div><div class="recent-post-info"><a class="article-title" href="/2023/08/29/LeetCode_823/" title="LeetCode题解——823.带因子的二叉树">LeetCode题解——823.带因子的二叉树</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2023-08-29T05:06:24.000Z" title="发表于 2023-08-29 13:06:24">2023-08-29</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E7%A8%8B%E5%BA%8F/">程序</a></span><span class="article-meta tags"><span class="article-meta-separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/LeetCode%E9%A2%98%E8%A7%A3/">LeetCode题解</a><span class="article-meta-link">•</span><a class="article-meta__tags" href="/tags/LeetCode%E6%AF%8F%E6%97%A5%E4%B8%80%E9%A2%98/">LeetCode每日一题</a></span></div><div class="content">LeetCode题解带因子的二叉树题目预览：给出一个含有不重复整数元素的数组 $arr$ ，每个整数 $arr[i]$ 均大于 $1$。
+设 \(s=nums[i]+nums[i+ ...</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/2023/08/29/LeetCode_823/" title="LeetCode题解——823.带因子的二叉树"><img class="post-bg" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/../images/LeetCode.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="LeetCode题解——823.带因子的二叉树"></a></div><div class="recent-post-info"><a class="article-title" href="/2023/08/29/LeetCode_823/" title="LeetCode题解——823.带因子的二叉树">LeetCode题解——823.带因子的二叉树</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2023-08-29T05:06:24.000Z" title="发表于 2023-08-29 13:06:24">2023-08-29</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E7%A8%8B%E5%BA%8F/">程序</a></span><span class="article-meta tags"><span class="article-meta-separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/LeetCode%E9%A2%98%E8%A7%A3/">LeetCode题解</a><span class="article-meta-link">•</span><a class="article-meta__tags" href="/tags/LeetCode%E6%AF%8F%E6%97%A5%E4%B8%80%E9%A2%98/">LeetCode每日一题</a></span></div><div class="content">LeetCode题解
+带因子的二叉树
+题目预览：
+给出一个含有不重复整数元素的数组 \(arr\) ，每个整数 \(arr[i]\) 均大于 \(1\)。
 用这些整数来构建二叉树，每个整数可以使用任意次数。其中：每个非叶结点的值应等于它的两个子结点的值的乘积。
-满足条件的二叉树一共有多少个？答案可能很大，返回 对 $10^9 + 7$ 取余 的结果。
+满足条件的二叉树一共有多少个？答案可能很大，返回 对 \(10^9 + 7\) 取余 的结果。
 示例 1:
-输入: arr = [2, 4]输出: 3解释: 可以得到这些二叉树: [2], [4], [4, 2, 2]  
+
+输入: arr = [2, 4]
+输出: 3
+解释: 可以得到这些二叉树: [2], [4], [4, 2, 2]
 
 示例 2:
-输入: arr = [2, 4, 5, 10]输出: 7解释: 可以得到这些二叉树: [2], [4], [5], [10], [4, 2, 2], [10, 2, 5], [10, 5, 2].  
+
+输入: arr = [2, 4, 5, 10]
+输出: 7
+解释: 可以得到这些二叉树: [2], [4], [5], [10], [4, 2, 2], [10, 2,
+5], [10, 5, 2].
 
 提示：
 
-$1 &lt;= arr.length &lt;= 1000$
-
-$2 &lt;= arr[i] &lt;= 10^9$
-
-$arr$ 中的所有值 互不相同
-
+\(1 &lt;= arr.length &lt;=
+1000\)
+\(2 &lt;= arr[i] &lt;=
+10^9\)
+\(arr\) 中的所有值
+互不相同
 
 
 以下是题解：
-思路: 递推对于每个根节点，由题意可以确定其值一定大于它的任意一个子节点，因此我们可以先将容器按 升序 排序，然后依次计算其中的数 ...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/2023/08/29/LeetCode_15/" title="LeetCode题解——15.三数之和"><img class="post-bg" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/../images/LeetCode.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="LeetCode题解——15.三数之和"></a></div><div class="recent-post-info"><a class="article-title" href="/2023/08/29/LeetCode_15/" title="LeetCode题解——15.三数之和">LeetCode题解——15.三数之和</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2023-08-29T01:09:05.000Z" title="发表于 2023-08-29 09:09:05">2023-08-29</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E7%A8%8B%E5%BA%8F/">程序</a></span><span class="article-meta tags"><span class="article-meta-separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/LeetCode%E9%A2%98%E8%A7%A3/">LeetCode题解</a></span></div><div class="content">LeetCode题解三数之和题目预览：给你一个整数数组 $nums$ ，判断是否存在三元组 $[nums[i], nums[j], nums[k]]$ 满足 $i != j$、$i != k$ 且 $j != k$ ，同时还满足 $nums[i] + nums[j] + nums[k] == 0$ 。请
-你返回所有和为 $0$ 且不重复的三元组。
+思路: 递推
+对于每个根节点，由题意 ...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/2023/08/29/LeetCode_15/" title="LeetCode题解——15.三数之和"><img class="post-bg" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/../images/LeetCode.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="LeetCode题解——15.三数之和"></a></div><div class="recent-post-info"><a class="article-title" href="/2023/08/29/LeetCode_15/" title="LeetCode题解——15.三数之和">LeetCode题解——15.三数之和</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2023-08-29T01:09:05.000Z" title="发表于 2023-08-29 09:09:05">2023-08-29</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E7%A8%8B%E5%BA%8F/">程序</a></span><span class="article-meta tags"><span class="article-meta-separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/LeetCode%E9%A2%98%E8%A7%A3/">LeetCode题解</a></span></div><div class="content">LeetCode题解
+三数之和
+题目预览：
+给你一个整数数组 \(nums\)
+，判断是否存在三元组 \([nums[i], nums[j],
+nums[k]]\) 满足 \(i !=
+j\)、\(i != k\) 且 \(j != k\) ，同时还满足 \(nums[i] + nums[j] + nums[k] == 0\) 。请
+你返回所有和为 \(0\)
+且不重复的三元组。
 注意：答案中不可以包含重复的三元组。
 示例 1：
-输入：nums = [-1,0,1,2,-1,-4]输出：[[-1,-1,2],[-1,0,1]]解释：nums[0] + nums[1] + nums[2] = (-1) + 0 + 1 = 0 。nums[1] + nums[2] + nums[4] = 0 + 1 + (-1) = 0 。nums[0] + nums[3] + nums[4] = (-1) + 2 + (-1) = 0 。不同的三元组是 [-1,0,1] 和 [-1,-1,2] 。注意，输出的顺序和三元组的顺序并不重要。
 
-示例 2：
-输入：nums = [0,1,1]输出：[]解释：唯一可能的三元组和不为 0 。  
- ...</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/2023/08/28/LeetCode_14/" title="LeetCode题解——14.最长公共前缀"><img class="post-bg" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/../images/LeetCode.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="LeetCode题解——14.最长公共前缀"></a></div><div class="recent-post-info"><a class="article-title" href="/2023/08/28/LeetCode_14/" title="LeetCode题解——14.最长公共前缀">LeetCode题解——14.最长公共前缀</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2023-08-28T12:46:08.000Z" title="发表于 2023-08-28 20:46:08">2023-08-28</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E7%A8%8B%E5%BA%8F/">程序</a></span><span class="article-meta tags"><span class="article-meta-separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/LeetCode%E9%A2%98%E8%A7%A3/">LeetCode题解</a></span></div><div class="content">LeetCode题解最长公共前缀题目预览：编写一个函数来查找字符串数组中的 最长公共前缀 。
-如果不存在公共前缀，返回空字符串 &quot;&quot;。
+输入：nums = [-1,0,1,2,-1,-4]
+输出：[[-1,-1,2],[-1,0,1]]
+解释：
+nums[0] + nums[1] + nums[2] = (-1) + 0 + 1 = 0 。
+nums[1] + nums[2] + nums[4] = 0 + 1 + (-1) = 0 。
+nums[0] + nums[3] + nums[4] = (-1) + 2 + (-1) = 0 。
+不同的三元组是 [-1,0,1] 和 [-1,-1,2] 。
+注意，输出的顺序和三元组的顺序并不重要。
+
+示例  ...</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/2023/08/28/LeetCode_14/" title="LeetCode题解——14.最长公共前缀"><img class="post-bg" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/../images/LeetCode.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="LeetCode题解——14.最长公共前缀"></a></div><div class="recent-post-info"><a class="article-title" href="/2023/08/28/LeetCode_14/" title="LeetCode题解——14.最长公共前缀">LeetCode题解——14.最长公共前缀</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2023-08-28T12:46:08.000Z" title="发表于 2023-08-28 20:46:08">2023-08-28</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E7%A8%8B%E5%BA%8F/">程序</a></span><span class="article-meta tags"><span class="article-meta-separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/LeetCode%E9%A2%98%E8%A7%A3/">LeetCode题解</a></span></div><div class="content">LeetCode题解
+最长公共前缀
+题目预览：
+编写一个函数来查找字符串数组中的 最长公共前缀 。
+如果不存在公共前缀，返回空字符串 ""。
 示例 1：
-输入：strs = [“flower”,”flow”,”flight”]输出：“fl”
+
+输入：strs = ["flower","flow","flight"] 输出："fl"
 
 示例 2：
-输入：strs = [“dog”,”racecar”,”car”]输出：“”解释：输入不存在公共前缀。
+
+输入：strs = ["dog","racecar","car"] 输出：""
+解释：输入不存在公共前缀。
 
 提示：
 
-$1 &lt;= strs.length &lt;= 200$  
-
-$0 &lt;= strs[i].length &lt;= 200$  
-
-$strs[i] 仅由小写英文字母组成$
-
+\(1 &lt;= strs.length &lt;=
+200\)
+\(0 &lt;= strs[i].length &lt;=
+200\)
+\(strs[i]
+仅由小写英文字母组成\)
 
 
 以下是题解：
-解题思路:本题思路较清晰，对于若干个字符串，我们可以先储存第一个的字符串的字符，然后依次比较后面字符串的相应部分。
-特殊情况包括：
-
-字符串容器为空：返回&quot;&quot;
-字符串为空：返回&quot;&quot;
-
+解题思路:
+本题思路较清晰，对于若干个字符串，我们可以先储存第一个的字符串的字符，然后依次比较后面字符串的相应部分。
+特殊情况包括： 1. 字符串容器为空：返回"" 2.
+字符串为空：返回""
 代码如下：
-123456789101112131415161718192021222324252627class Solution &#123;public:    string l ...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/2023/08/28/LeetCode_13/" title="LeetCode题解——13.罗马数字转整数"><img class="post-bg" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/../images/LeetCode.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="LeetCode题解——13.罗马数字转整数"></a></div><div class="recent-post-info"><a class="article-title" href="/2023/08/28/LeetCode_13/" title="LeetCode题解——13.罗马数字转整数">LeetCode题解——13.罗马数字转整数</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2023-08-28T11:46:48.000Z" title="发表于 2023-08-28 19:46:48">2023-08-28</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E7%A8%8B%E5%BA%8F/">程序</a></span><span class="article-meta tags"><span class="article-meta-separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/LeetCode%E9%A2%98%E8%A7%A3/">LeetCode题解</a></span></div><div class="content">LeetCode题解罗马数字转整数题目预览：罗马数字包含以下七种字符: $I$，$V$，$X$，$L$，$C$，$D$ 和 $M$。
-
+123456789101112131415161718192021222324252627class Solution &#123;public: ...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/2023/08/28/LeetCode_13/" title="LeetCode题解——13.罗马数字转整数"><img class="post-bg" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/../images/LeetCode.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="LeetCode题解——13.罗马数字转整数"></a></div><div class="recent-post-info"><a class="article-title" href="/2023/08/28/LeetCode_13/" title="LeetCode题解——13.罗马数字转整数">LeetCode题解——13.罗马数字转整数</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2023-08-28T11:46:48.000Z" title="发表于 2023-08-28 19:46:48">2023-08-28</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E7%A8%8B%E5%BA%8F/">程序</a></span><span class="article-meta tags"><span class="article-meta-separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/LeetCode%E9%A2%98%E8%A7%A3/">LeetCode题解</a></span></div><div class="content">LeetCode题解
+罗马数字转整数
+题目预览：
+罗马数字包含以下七种字符: \(I\)，\(V\)，\(X\)，\(L\)，\(C\)，\(D\)
+和 \(M\)。
 
 
 
@@ -465,22 +593,19 @@ M
 
 
 
+例如， 罗马数字 \(2\) 写做 \(II\) ，即为两个并列的 \(1\)。\(12\) 写做 \(XII\) ，即为 \(X
++ II\) 。 \(27\) 写做 \(XXVII\), 即为 \(XX + V + II\) 。
+通常情况下，罗马数字中小的数字在大的数字的右边。但也存在特例，例如
+\(4\) 不写做 \(IIII\)，而是 \(IV\)。数字 \(1\) 在数字 \(5\) 的左边，所表示的数等于大数 \(5\) 减小数 \(1\) 得到的数值 \(4\) 。同样地，数字 \(9\) 表示为 \(IX\)。这个特殊的规则只适用于以下六种情况：
 
-例如， 罗马数字 $2$ 写做 $II$ ，即为两个并列的 $1$。$12$ 写做 $XII$ ，即为 $X + II$ 。 $27$ 写做  $XXVII$, 即为 $XX + V + II$ 。
-通常情况下，罗马数字中小的数字在大的数字的右边。但也存在特例，例如 $4$ 不写做 $IIII$，而是 $IV$。数字 $1$ 在数字 $5$ 的左边，所表示的数等于大数 $5$ 减小数 $1$ 得到的数值 $4$ 。同样地，数字 $9$ 表示为 $IX$。这个特殊的规则只适用于以下六种情况：
-
-$I$ 可以放在 $V\ (5)$ 和 $X\ (10)$ 的左边，来表示 $4$ 和 $9$。  
-
-$X$ 可以放在 $L\ (50)$ 和 $C\ (100)$ 的左边，来表示 $40$ 和 $90$。   
-
-$C$ 可以放在 ...</div></div></div><nav id="pagination"><div class="pagination"><span class="page-number current">1</span><a class="page-number" href="/page/2/#content-inner">2</a><a class="page-number" href="/page/3/#content-inner">3</a><a class="extend next" rel="next" href="/page/2/#content-inner"><i class="fas fa-chevron-right fa-fw"></i></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/images/avatar.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">Lwt</div><div class="author-info__description">欢迎欢迎~</div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">30</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">4</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">3</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/Lwt235"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/Lwt235" target="_blank" title="Github"><i class="fab fa-github" style="color: #24292e;"></i></a><a class="social-icon" href="mailto:378092251@qq.com" target="_blank" title="Email"><i class="fas fa-envelope" style="color: #4a7dbe;"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div><div id="welcome-info"></div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2023/08/31/LeetCode_21/" title="LeetCode题解——21.合并两个有序链表"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/../images/LeetCode.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="LeetCode题解——21.合并两个有序链表"/></a><div class="content"><a class="title" href="/2023/08/31/LeetCode_21/" title="LeetCode题解——21.合并两个有序链表">LeetCode题解——21.合并两个有序链表</a><time datetime="2023-08-31T09:20:34.000Z" title="发表于 2023-08-31 17:20:34">2023-08-31</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2023/08/31/LeetCode_20/" title="LeetCode题解——20.有效的括号"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/../images/LeetCode.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="LeetCode题解——20.有效的括号"/></a><div class="content"><a class="title" href="/2023/08/31/LeetCode_20/" title="LeetCode题解——20.有效的括号">LeetCode题解——20.有效的括号</a><time datetime="2023-08-31T04:28:43.000Z" title="发表于 2023-08-31 12:28:43">2023-08-31</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2023/08/31/LeetCode_19/" title="LeetCode题解——19.删除链表的倒数第 N 个结点"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/../images/LeetCode.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="LeetCode题解——19.删除链表的倒数第 N 个结点"/></a><div class="content"><a class="title" href="/2023/08/31/LeetCode_19/" title="LeetCode题解——19.删除链表的倒数第 N 个结点">LeetCode题解——19.删除链表的倒数第 N 个结点</a><time datetime="2023-08-31T02:49:57.000Z" title="发表于 2023-08-31 10:49:57">2023-08-31</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2023/08/31/LeetCode_1761/" title="LeetCode题解——1761.一个图中连通三元组的最小度数"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/../images/LeetCode.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="LeetCode题解——1761.一个图中连通三元组的最小度数"/></a><div class="content"><a class="title" href="/2023/08/31/LeetCode_1761/" title="LeetCode题解——1761.一个图中连通三元组的最小度数">LeetCode题解——1761.一个图中连通三元组的最小度数</a><time datetime="2023-08-31T02:09:24.000Z" title="发表于 2023-08-31 10:09:24">2023-08-31</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2023/08/30/LeetCode_18/" title="LeetCode题解——18.四数之和"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/../images/LeetCode.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="LeetCode题解——18.四数之和"/></a><div class="content"><a class="title" href="/2023/08/30/LeetCode_18/" title="LeetCode题解——18.四数之和">LeetCode题解——18.四数之和</a><time datetime="2023-08-30T14:45:26.000Z" title="发表于 2023-08-30 22:45:26">2023-08-30</time></div></div></div></div><div class="card-widget card-categories"><div class="item-headline">
+\(I\) 可以放在 \(V\ ( ...</div></div></div><nav id="pagination"><div class="pagination"><span class="page-number current">1</span><a class="page-number" href="/page/2/#content-inner">2</a><a class="page-number" href="/page/3/#content-inner">3</a><a class="extend next" rel="next" href="/page/2/#content-inner"><i class="fas fa-chevron-right fa-fw"></i></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/images/avatar.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">Lwt</div><div class="author-info__description">欢迎欢迎~</div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">30</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">4</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">3</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/Lwt235"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/Lwt235" target="_blank" title="Github"><i class="fab fa-github" style="color: #24292e;"></i></a><a class="social-icon" href="mailto:378092251@qq.com" target="_blank" title="Email"><i class="fas fa-envelope" style="color: #4a7dbe;"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div><div id="welcome-info"></div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2023/08/31/LeetCode_21/" title="LeetCode题解——21.合并两个有序链表"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/../images/LeetCode.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="LeetCode题解——21.合并两个有序链表"/></a><div class="content"><a class="title" href="/2023/08/31/LeetCode_21/" title="LeetCode题解——21.合并两个有序链表">LeetCode题解——21.合并两个有序链表</a><time datetime="2023-08-31T09:20:34.000Z" title="发表于 2023-08-31 17:20:34">2023-08-31</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2023/08/31/LeetCode_20/" title="LeetCode题解——20.有效的括号"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/../images/LeetCode.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="LeetCode题解——20.有效的括号"/></a><div class="content"><a class="title" href="/2023/08/31/LeetCode_20/" title="LeetCode题解——20.有效的括号">LeetCode题解——20.有效的括号</a><time datetime="2023-08-31T04:28:43.000Z" title="发表于 2023-08-31 12:28:43">2023-08-31</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2023/08/31/LeetCode_19/" title="LeetCode题解——19.删除链表的倒数第 N 个结点"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/../images/LeetCode.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="LeetCode题解——19.删除链表的倒数第 N 个结点"/></a><div class="content"><a class="title" href="/2023/08/31/LeetCode_19/" title="LeetCode题解——19.删除链表的倒数第 N 个结点">LeetCode题解——19.删除链表的倒数第 N 个结点</a><time datetime="2023-08-31T02:49:57.000Z" title="发表于 2023-08-31 10:49:57">2023-08-31</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2023/08/31/LeetCode_1761/" title="LeetCode题解——1761.一个图中连通三元组的最小度数"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/../images/LeetCode.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="LeetCode题解——1761.一个图中连通三元组的最小度数"/></a><div class="content"><a class="title" href="/2023/08/31/LeetCode_1761/" title="LeetCode题解——1761.一个图中连通三元组的最小度数">LeetCode题解——1761.一个图中连通三元组的最小度数</a><time datetime="2023-08-31T02:09:24.000Z" title="发表于 2023-08-31 10:09:24">2023-08-31</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2023/08/30/LeetCode_18/" title="LeetCode题解——18.四数之和"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/../images/LeetCode.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="LeetCode题解——18.四数之和"/></a><div class="content"><a class="title" href="/2023/08/30/LeetCode_18/" title="LeetCode题解——18.四数之和">LeetCode题解——18.四数之和</a><time datetime="2023-08-30T14:45:26.000Z" title="发表于 2023-08-30 22:45:26">2023-08-30</time></div></div></div></div><div class="card-widget card-categories"><div class="item-headline">
             <i class="fas fa-folder-open"></i>
             <span>分类</span>
             
             </div>
             <ul class="card-category-list" id="aside-cat-list">
             <li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E6%95%99%E7%A8%8B/"><span class="card-category-list-name">教程</span><span class="card-category-list-count">2</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E6%AC%A2%E8%BF%8E/"><span class="card-category-list-name">欢迎</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E7%A8%8B%E5%BA%8F/"><span class="card-category-list-name">程序</span><span class="card-category-list-count">27</span></a></li>
-            </ul></div><div class="card-widget card-tags"><div class="item-headline"><i class="fas fa-tags"></i><span>标签</span></div><div class="card-tag-cloud"><a href="/tags/Git/" style="font-size: 1.23em; color: #999ea6">Git</a> <a href="/tags/LeetCode%E9%A2%98%E8%A7%A3/" style="font-size: 1.5em; color: #99a9bf">LeetCode题解</a> <a href="/tags/LeetCode%E6%AF%8F%E6%97%A5%E4%B8%80%E9%A2%98/" style="font-size: 1.37em; color: #99a4b2">LeetCode每日一题</a> <a href="/tags/%E6%AC%A2%E8%BF%8E/" style="font-size: 1.1em; color: #999">欢迎</a></div></div><div class="card-widget card-archives"><div class="item-headline"><i class="fas fa-archive"></i><span>归档</span></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/08/"><span class="card-archive-list-date">八月 2023</span><span class="card-archive-list-count">30</span></a></li></ul></div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>网站资讯</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">文章数目 :</div><div class="item-count">30</div></div><div class="webinfo-item"><div class="item-name">本站访客数 :</div><div class="item-count" id="busuanzi_value_site_uv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">本站总访问量 :</div><div class="item-count" id="busuanzi_value_site_pv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">最后更新时间 :</div><div class="item-count" id="last-push-date" data-lastPushDate="2023-08-31T09:30:12.186Z"><i class="fa-solid fa-spinner fa-spin"></i></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2023 By Lwt</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><a class="icon-V hidden" onclick="switchNightMode()" title="浅色和深色模式转换"><svg width="25" height="25" viewBox="0 0 1024 1024"><use id="modeicon" xlink:href="#icon-moon"></use></svg></a><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i><span id="percent">0<span>%</span></span></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fancyapps-ui/5.0.19/fancybox/fancybox.umd.min.js"></script><script src="https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-M/vanilla-lazyload/17.3.1/lazyload.iife.min.js"></script><div class="js-pjax"><script>window.typedJSFn = {
+            </ul></div><div class="card-widget card-tags"><div class="item-headline"><i class="fas fa-tags"></i><span>标签</span></div><div class="card-tag-cloud"><a href="/tags/LeetCode%E9%A2%98%E8%A7%A3/" style="font-size: 1.5em; color: #99a9bf">LeetCode题解</a> <a href="/tags/Git/" style="font-size: 1.23em; color: #999ea6">Git</a> <a href="/tags/%E6%AC%A2%E8%BF%8E/" style="font-size: 1.1em; color: #999">欢迎</a> <a href="/tags/LeetCode%E6%AF%8F%E6%97%A5%E4%B8%80%E9%A2%98/" style="font-size: 1.37em; color: #99a4b2">LeetCode每日一题</a></div></div><div class="card-widget card-archives"><div class="item-headline"><i class="fas fa-archive"></i><span>归档</span></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/08/"><span class="card-archive-list-date">八月 2023</span><span class="card-archive-list-count">30</span></a></li></ul></div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>网站资讯</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">文章数目 :</div><div class="item-count">30</div></div><div class="webinfo-item"><div class="item-name">本站访客数 :</div><div class="item-count" id="busuanzi_value_site_uv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">本站总访问量 :</div><div class="item-count" id="busuanzi_value_site_pv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">最后更新时间 :</div><div class="item-count" id="last-push-date" data-lastPushDate="2023-08-31T09:35:26.996Z"><i class="fa-solid fa-spinner fa-spin"></i></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2023 By Lwt</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><a class="icon-V hidden" onclick="switchNightMode()" title="浅色和深色模式转换"><svg width="25" height="25" viewBox="0 0 1024 1024"><use id="modeicon" xlink:href="#icon-moon"></use></svg></a><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i><span id="percent">0<span>%</span></span></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fancyapps-ui/5.0.19/fancybox/fancybox.umd.min.js"></script><script src="https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-M/vanilla-lazyload/17.3.1/lazyload.iife.min.js"></script><div class="js-pjax"><script>window.typedJSFn = {
   init: (str) => {
     window.typed = new Typed('#subtitle', Object.assign({
       strings: str,

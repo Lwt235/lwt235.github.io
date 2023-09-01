@@ -6,7 +6,7 @@
   <link href="https://www.lwt-server.cn/atom.xml" rel="self"/>
   
   <link href="https://www.lwt-server.cn/"/>
-  <updated>2023-09-01T09:09:40.290Z</updated>
+  <updated>2023-09-01T10:03:50.190Z</updated>
   <id>https://www.lwt-server.cn/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>LeetCode题解——27.移除元素</title>
+    <link href="https://www.lwt-server.cn/2023/09/01/LeetCode_27/"/>
+    <id>https://www.lwt-server.cn/2023/09/01/LeetCode_27/</id>
+    <published>2023-09-01T09:55:37.000Z</published>
+    <updated>2023-09-01T10:03:50.190Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="leetcode题解">LeetCode题解</h1><h2 id="移除元素">移除元素</h2><h3 id="题目预览">题目预览：</h3><p>给你一个数组 <span class="math inline">\(nums\)</span> 和一个值 <spanclass="math inline">\(val\)</span>，你需要 <b>原地</b> 移除所有数值等于<span class="math inline">\(val\)</span>的元素，并返回移除后数组的新长度。</p><p>不要使用额外的数组空间，你必须仅使用 <spanclass="math inline">\(O(1)\)</span> 额外空间并 原地 修改输入数组。</p><p>元素的顺序可以改变。你不需要考虑数组中超出新长度后面的元素。</p><p>说明:</p><p>为什么返回数值是整数，但输出的答案是数组呢?</p><p>请注意，输入数组是以「引用」方式传递的，这意味着在函数里修改输入数组对于调用者是可见的。</p><p>你可以想象内部操作如下:</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">// nums 是以“引用”方式传递的。也就是说，不对实参作任何拷贝</span><br><span class="line">int len = removeElement(nums, val);</span><br><span class="line"></span><br><span class="line">// 在函数里修改输入数组对于调用者是可见的。</span><br><span class="line">// 根据你的函数返回的长度, 它会打印出数组中 该长度范围内 的所有元素。</span><br><span class="line">for (int i = 0; i &lt; len; i++) &#123;</span><br><span class="line">    print(nums[i]);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h4 id="示例-1">示例 1：</h4><blockquote><p><b>输入：</b>nums = [3,2,2,3], val = 3<br /><b>输出：</b>2, nums = [2,2]<br /><b>解释：</b>函数应该返回新的长度 2, 并且 nums 中的前两个元素均为2。你不需要考虑数组中超出新长度后面的元素。例如，函数返回的新长度为 2，而 nums = [2,2,3,3] 或 nums = [2,2,0,0]，也会被视作正确答案。</p></blockquote><h3 id="示例-2">示例 2：</h3><blockquote><p><b>输入：</b>nums = [0,1,2,2,3,0,4,2], val = 2<br /><b>输出：</b>5, nums = [0,1,4,0,3]<br /><b>解释：</b>函数应该返回新的长度 5, 并且 nums 中的前五个元素为 0, 1, 3,0,4。注意这五个元素可为任意顺序。你不需要考虑数组中超出新长度后面的元素。</p></blockquote><p>提示：</p><ul><li><p><span class="math inline">\(0 &lt;= nums.length &lt;=100\)</span></p></li><li><p><span class="math inline">\(0 &lt;= nums[i] &lt;=50\)</span></p></li><li><p><span class="math inline">\(0 &lt;= val &lt;=100\)</span></p></li></ul><hr /><p>以下是题解：</p><h3 id="解题思路">解题思路:</h3><p>本题与前一题极其相似，思路几乎一模一样，详细请参考前文<ahref="/2023/09/01/LeetCode_26/">LeetCode_26——删除有序数组中的重复项</a></p><p>代码如下：</p><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="type">int</span> <span class="title">removeElement</span><span class="params">(vector&lt;<span class="type">int</span>&gt;&amp; nums, <span class="type">int</span> val)</span> </span>&#123;</span><br><span class="line">        <span class="type">int</span> Len = nums.<span class="built_in">size</span>();</span><br><span class="line">        <span class="type">int</span> ans = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; Len;i++)</span><br><span class="line">            <span class="keyword">if</span> (nums[i] != val)</span><br><span class="line">                nums[ans++] = nums[i];</span><br><span class="line">        <span class="keyword">return</span> ans;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure><h4 id="结果">结果</h4><p><a href="https://imgse.com/i/pP0LRmR"><imgsrc="https://s1.ax1x.com/2023/09/01/pP0LRmR.png"alt="pP0LRmR.png" /></a></p><div style="text-align:right;"><p>本篇博客撰写于2023/9/1 17:55:37</p>]]></content>
+    
+    
+    <summary type="html">移除元素</summary>
+    
+    
+    
+    <category term="程序" scheme="https://www.lwt-server.cn/categories/%E7%A8%8B%E5%BA%8F/"/>
+    
+    
+    <category term="LeetCode题解" scheme="https://www.lwt-server.cn/tags/LeetCode%E9%A2%98%E8%A7%A3/"/>
+    
+  </entry>
   
   <entry>
     <title>LeetCode题解——26.删除有序数组中的重复项</title>
@@ -413,27 +434,6 @@
     
     
     <summary type="html">整数转罗马数字</summary>
-    
-    
-    
-    <category term="程序" scheme="https://www.lwt-server.cn/categories/%E7%A8%8B%E5%BA%8F/"/>
-    
-    
-    <category term="LeetCode题解" scheme="https://www.lwt-server.cn/tags/LeetCode%E9%A2%98%E8%A7%A3/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>LeetCode题解——11.盛最多水的容器</title>
-    <link href="https://www.lwt-server.cn/2023/08/28/LeetCode_11/"/>
-    <id>https://www.lwt-server.cn/2023/08/28/LeetCode_11/</id>
-    <published>2023-08-28T09:12:55.000Z</published>
-    <updated>2023-08-28T09:41:15.788Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="leetcode题解">LeetCode题解</h1><h2 id="盛最多水的容器">盛最多水的容器</h2><h3 id="题目预览">题目预览：</h3><p>给定一个长度为 <span class="math inline">\(n\)</span> 的整数数组<span class="math inline">\(height\)</span> 。有 <spanclass="math inline">\(n\)</span> 条垂线，第 <spanclass="math inline">\(i\)</span> 条线的两个端点是 <spanclass="math inline">\((i, 0)\)</span> 和 <span class="math inline">\((i,height[i])\)</span> 。</p><p>找出其中的两条线，使得它们与 <span class="math inline">\(x\)</span>轴共同构成的容器可以容纳最多的水。</p><p>返回容器可以储存的最大水量。</p><p>说明：你不能倾斜容器。</p><h4 id="示例-1">示例 1：</h4><p><a href="https://imgse.com/i/pPaK5FO"><imgsrc="https://s1.ax1x.com/2023/08/28/pPaK5FO.jpg"alt="pPaK5FO.jpg" /></a></p><blockquote><p><b>输入：</b>[1,8,6,2,5,4,8,3,7]<br /><b>输出：</b>49<br /><b>解释：</b>图中垂直线代表输入数组[1,8,6,2,5,4,8,3,7]。在此情况下，容器能够容纳水（表示为蓝色部分）的最大值为49。</p></blockquote><h4 id="示例-2">示例 2：</h4><blockquote><p><b>输入：</b>height = [1,1]<br /><b>输出：</b>1</p></blockquote><p>提示：</p><ul><li><p><span class="math inline">\(n == height.length\)</span></p></li><li><p><span class="math inline">\(2 &lt;= n &lt;= 105\)</span></p></li><li><p><span class="math inline">\(0 &lt;= height[i] &lt;=10^4\)</span></p></li></ul><hr /><p>以下是题解：</p><h3 id="解题思路双指针法">解题思路:双指针法：</h3><ol type="1"><li>定义两个分别指向容器两端的指针；<br /></li><li>依次向内收缩对应高度最短的一边；<br /></li><li>更新最大值；<br /></li><li>重复上述 <span class="math inline">\(2 , 3\)</span>步骤直到两个指针相遇。</li></ol><p>代码如下：</p><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line"><span class="keyword">public</span>: </span><br><span class="line">    <span class="function"><span class="type">int</span> <span class="title">maxArea</span><span class="params">(vector&lt;<span class="type">int</span>&gt;&amp; height)</span> </span>&#123;</span><br><span class="line">        <span class="type">int</span> ans=<span class="number">0</span>,Left=<span class="number">0</span>,Right=height.<span class="built_in">size</span>()<span class="number">-1</span>;</span><br><span class="line">        <span class="keyword">while</span>(Left&lt;Right)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="type">int</span> Len=Right-Left;</span><br><span class="line">            ans=<span class="built_in">max</span>(ans,<span class="built_in">min</span>(height[Left],height[Right])*Len);</span><br><span class="line">            <span class="keyword">if</span>(height[Left]&gt;height[Right])</span><br><span class="line">                Right--;</span><br><span class="line">            <span class="keyword">else</span></span><br><span class="line">                Left++;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> ans;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure><h4 id="结果">结果</h4><p><a href="https://imgse.com/i/pPaKofe"><imgsrc="https://s1.ax1x.com/2023/08/28/pPaKofe.png"alt="pPaKofe.png" /></a></p><div style="text-align:right;"><p>本篇博客撰写于2023/8/28 17:12:55</p>]]></content>
-    
-    
-    <summary type="html">盛最多水的容器</summary>
     
     
     

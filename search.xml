@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>LeetCode题解——26.删除有序数组中的重复项</title>
+      <link href="/2023/09/01/LeetCode_26/"/>
+      <url>/2023/09/01/LeetCode_26/</url>
+      
+        <content type="html"><![CDATA[<h1 id="leetcode题解">LeetCode题解</h1><h2 id="删除有序数组中的重复项">删除有序数组中的重复项</h2><h3 id="题目预览">题目预览：</h3><p>给你一个 升序排列 的数组 <span class="math inline">\(nums\)</span>，请你 <b>原地</b> 删除重复出现的元素，使每个元素 <b>只出现一次</b>，返回删除后数组的新长度。元素的 <b>相对顺序</b> 应该保持 <b>一致</b>。然后返回 <span class="math inline">\(nums\)</span>中唯一元素的个数。</p><p>考虑 <span class="math inline">\(nums\)</span> 的唯一元素的数量为<span class="math inline">\(k\)</span>，你需要做以下事情确保你的题解可以被通过：</p><p>更改数组 <span class="math inline">\(nums\)</span> ，使 <spanclass="math inline">\(nums\)</span> 的前 <spanclass="math inline">\(k\)</span> 个元素包含唯一元素，并按照它们最初在<span class="math inline">\(nums\)</span> 中出现的顺序排列。<spanclass="math inline">\(nums\)</span> 的其余元素与 <spanclass="math inline">\(nums\)</span> 的大小不重要。 返回 <spanclass="math inline">\(k\)</span> 。</p><p><b>判题标准:</b></p><p>系统会用下面的代码来测试你的题解:</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">int[] nums = [...]; // 输入数组</span><br><span class="line">int[] expectedNums = [...]; // 长度正确的期望答案</span><br><span class="line"></span><br><span class="line">int k = removeDuplicates(nums); // 调用</span><br><span class="line"></span><br><span class="line">assert k == expectedNums.length;</span><br><span class="line">for (int i = 0; i &lt; k; i++) &#123;</span><br><span class="line">    assert nums[i] == expectedNums[i];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>如果所有断言都通过，那么您的题解将被 <b>通过</b>。</p><h4 id="示例-1">示例 1：</h4><blockquote><p><b>输入：</b>nums = [1,1,2]<br /><b>输出：</b>2, nums = [1,2,_]<br /><b>解释：</b>函数应该返回新的长度 2 ，并且原数组 nums的前两个元素被修改为 1, 2 。不需要考虑数组中超出新长度后面的元素。</p></blockquote><h4 id="示例-2">示例 2：</h4><blockquote><p><b>输入：</b>nums = [0,0,1,1,1,2,2,3,3,4]<br /><b>输出：</b>5, nums = [0,1,2,3,4]<br /><b>解释：</b>函数应该返回新的长度 5 ， 并且原数组 nums的前五个元素被修改为 0, 1, 2, 3, 4。不需要考虑数组中超出新长度后面的元素。</p></blockquote><p>提示：</p><ul><li><span class="math inline">\(1 &lt;= nums.length &lt;= 3 *10^4\)</span></li><li><span class="math inline">\(-10^4 &lt;= nums[i] &lt;=10^4\)</span></li><li><span class="math inline">\(nums\)</span> 已按 <b>升序</b> 排列</li></ul><hr /><p>以下是题解：</p><h3 id="解题思路">解题思路:</h3><p>使用两个指针，对于一个含有重复字符的容器，我们可以很容易得出结论：若<span class="math inline">\(nums&#39;\)</span> 为去重后的容器，那么对于<span class="math inline">\(nums&#39;\)</span>中的一切有效元素(指下标小于有效长度的元素)的下标 <spanclass="math inline">\(tag&#39;\)</span> 与原容器中有效元素的下标 <spanclass="math inline">\(tag\)</span>，我们可以得出 <spanclass="math inline">\(tag&gt;=tag&#39;\)</span></p><p>于是我们可以遍历原容器的每一个元素，当且仅当 <spanclass="math inline">\(nums[i-1]!=nums[i]\)</span> 时，我们才将其赋值给<span class="math inline">\(nums[ans]\)</span> ，并让 <spanclass="math inline">\(ans+1\)</span></p><p>代码如下：</p><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="type">int</span> <span class="title">removeDuplicates</span><span class="params">(vector&lt;<span class="type">int</span>&gt;&amp; nums)</span> </span>&#123;</span><br><span class="line">        <span class="type">int</span> Len = nums.<span class="built_in">size</span>();</span><br><span class="line">        <span class="type">int</span> ans = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; Len;i++)</span><br><span class="line">            <span class="keyword">if</span> (i==<span class="number">0</span>||nums[i] != nums[i - <span class="number">1</span>])</span><br><span class="line">                nums[ans++] = nums[i];</span><br><span class="line">        <span class="keyword">return</span> ans;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure><h4 id="结果">结果</h4><p><a href="https://imgse.com/i/pP0HCeP"><imgsrc="https://s1.ax1x.com/2023/09/01/pP0HCeP.png"alt="pP0HCeP.png" /></a></p><div style="text-align:right;"><p>本篇博客撰写于2023/9/1 16:58:25</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 程序 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> LeetCode题解 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>LeetCode题解——25.K 个一组翻转链表</title>
       <link href="/2023/09/01/LeetCode_25/"/>
       <url>/2023/09/01/LeetCode_25/</url>

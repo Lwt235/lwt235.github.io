@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>LeetCode题解——24.两两交换链表中的节点</title>
+      <link href="/2023/09/01/LeetCode_24/"/>
+      <url>/2023/09/01/LeetCode_24/</url>
+      
+        <content type="html"><![CDATA[<h1 id="leetcode题解">LeetCode题解</h1><h2 id="两两交换链表中的节点">两两交换链表中的节点</h2><h3 id="题目预览">题目预览：</h3><p>给你一个链表，两两交换其中相邻的节点，并返回交换后链表的头节点。你必须在不修改节点内部的值的情况下完成本题（即，只能进行节点交换）。</p><p><a href="https://imgse.com/i/pP0wfIO"><imgsrc="https://s1.ax1x.com/2023/09/01/pP0wfIO.jpg"alt="pP0wfIO.jpg" /></a></p><h4 id="示例-1">示例 1：</h4><blockquote><p><b>输入：</b>head = [1,2,3,4]<br /><b>输出：</b>[2,1,4,3]</p></blockquote><h4 id="示例-2">示例 2：</h4><blockquote><p><b>输入：</b>head = []<br /><b>输出：</b>[]</p></blockquote><h4 id="示例-3">示例 3：</h4><blockquote><p><b>输入：</b>head = [1]<br /><b>输出：</b>[1]</p></blockquote><p>提示：</p><ul><li><p>链表中节点的数目在范围 <span class="math inline">\([0,100]\)</span> 内</p></li><li><p><span class="math inline">\(0 &lt;= Node.val &lt;=100\)</span></p></li></ul><hr /><p>以下是题解：</p><h3 id="解题思路">解题思路:</h3><p>我们可以使用迭代的方法，定义三个指针 <spanclass="math inline">\(leftNode\)</span> , <spanclass="math inline">\(middleNode\)</span> , <spanclass="math inline">\(rightNode\)</span> 参考下图的流程进行交互。</p><p><a href="https://imgse.com/i/pP0wtrq"><imgsrc="https://s1.ax1x.com/2023/09/01/pP0wtrq.jpg"alt="pP0wtrq.jpg" /></a></p><p>代码如下：</p><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function">ListNode* <span class="title">swapPairs</span><span class="params">(ListNode* head)</span> </span>&#123;</span><br><span class="line">        ListNode* headNode =  <span class="keyword">new</span> <span class="built_in">ListNode</span>(<span class="number">0</span>,head);</span><br><span class="line">        ListNode* leftNode = headNode;</span><br><span class="line">        ListNode* middleNode = leftNode-&gt;next; </span><br><span class="line">        ListNode* rightNode = <span class="literal">nullptr</span>;</span><br><span class="line">        <span class="keyword">if</span>(middleNode!=<span class="literal">nullptr</span>)</span><br><span class="line">            rightNode = middleNode-&gt;next;</span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">            <span class="keyword">return</span> headNode-&gt;next;</span><br><span class="line">        <span class="keyword">while</span>(rightNode)</span><br><span class="line">        &#123;</span><br><span class="line">            middleNode-&gt;next = rightNode-&gt;next;</span><br><span class="line">            leftNode-&gt;next = rightNode;</span><br><span class="line">            rightNode-&gt;next = middleNode;</span><br><span class="line">            <span class="keyword">if</span>(middleNode-&gt;next!=<span class="literal">nullptr</span>)</span><br><span class="line">            &#123;</span><br><span class="line">                leftNode = middleNode;</span><br><span class="line">                middleNode = leftNode-&gt;next;</span><br><span class="line">                <span class="keyword">if</span>(middleNode!=<span class="literal">nullptr</span>)</span><br><span class="line">                    rightNode = middleNode-&gt;next;</span><br><span class="line">                <span class="keyword">else</span></span><br><span class="line">                    <span class="keyword">return</span> headNode-&gt;next;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">else</span></span><br><span class="line">                <span class="keyword">return</span> headNode-&gt;next;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> headNode-&gt;next;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure><h4 id="结果">结果</h4><p><a href="https://imgse.com/i/pP0wcs1"><imgsrc="https://s1.ax1x.com/2023/09/01/pP0wcs1.png"alt="pP0wcs1.png" /></a></p><div style="text-align:right;"><p>本篇博客撰写于2023/9/1 10:27:37</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 程序 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> LeetCode题解 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>LeetCode题解——2240.买钢笔和铅笔的方案数</title>
       <link href="/2023/09/01/LeetCode_2240/"/>
       <url>/2023/09/01/LeetCode_2240/</url>

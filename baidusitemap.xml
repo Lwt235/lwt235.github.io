@@ -1,16 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://www.lwt-server.cn/2023/09/10/LeetCode_35/</loc>
+    <lastmod>2023-09-10</lastmod>
+  </url>
+  <url>
+    <loc>https://www.lwt-server.cn/2023/09/04/LeetCode_34/</loc>
+    <lastmod>2023-09-10</lastmod>
+  </url>
+  <url>
     <loc>https://www.lwt-server.cn/2023/09/06/LeetCode_1123/</loc>
     <lastmod>2023-09-08</lastmod>
   </url>
   <url>
     <loc>https://www.lwt-server.cn/2023/09/05/LeetCode_2605/</loc>
     <lastmod>2023-09-05</lastmod>
-  </url>
-  <url>
-    <loc>https://www.lwt-server.cn/2023/09/04/LeetCode_34/</loc>
-    <lastmod>2023-09-04</lastmod>
   </url>
   <url>
     <loc>https://www.lwt-server.cn/2023/09/04/LeetCode_449/</loc>

@@ -6,7 +6,7 @@
   <link href="https://www.lwt-server.cn/atom.xml" rel="self"/>
   
   <link href="https://www.lwt-server.cn/"/>
-  <updated>2023-09-10T14:56:11.501Z</updated>
+  <updated>2023-09-18T09:15:42.299Z</updated>
   <id>https://www.lwt-server.cn/</id>
   
   <author>
@@ -17,11 +17,34 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>LeetCode_36</title>
+    <link href="https://www.lwt-server.cn/2023/09/18/LeetCode_36/"/>
+    <id>https://www.lwt-server.cn/2023/09/18/LeetCode_36/</id>
+    <published>2023-09-18T09:14:31.000Z</published>
+    <updated>2023-09-18T09:15:42.299Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="test文件">Test文件</h1><hr /><p>本博客写于2023/9/18 17:15</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;test文件&quot;&gt;Test文件&lt;/h1&gt;
+&lt;hr /&gt;
+&lt;p&gt;本博客写于2023/9/18 17:15&lt;/p&gt;
+</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
     <title>LeetCode题解——35.搜索插入位置</title>
     <link href="https://www.lwt-server.cn/2023/09/10/LeetCode_35/"/>
     <id>https://www.lwt-server.cn/2023/09/10/LeetCode_35/</id>
     <published>2023-09-10T14:44:30.000Z</published>
-    <updated>2023-09-10T14:56:11.501Z</updated>
+    <updated>2023-09-10T14:56:25.764Z</updated>
     
     <content type="html"><![CDATA[<h1 id="leetcode题解">LeetCode题解</h1><h2 id="搜索插入位置">搜索插入位置</h2><h3 id="题目预览">题目预览：</h3><p>给定一个排序数组和一个目标值，在数组中找到目标值，并返回其索引。如果目标值不存在于数组中，返回它将会被按顺序插入的位置。</p><p>请必须使用时间复杂度为 <span class="math inline">\(O(log n)\)</span>的算法。</p><h4 id="示例-1">示例 1:</h4><p><b>输入:</b> nums = [1,3,5,6], target = 5<br /><b>输出:</b> 2</p><h4 id="示例-2">示例 2:</h4><p><b>输入:</b> nums = [1,3,5,6], target = 2<br /><b>输出:</b> 1</p><h4 id="示例-3">示例 3:</h4><p><b>输入:</b> nums = [1,3,5,6], target = 7<br /><b>输出:</b> 4</p><p>提示:</p><ul><li><p><span class="math inline">\(1 &lt;= nums.length &lt;=10^4\)</span></p></li><li><p><span class="math inline">\(-10^4 &lt;= nums[i] &lt;=10^4\)</span></p></li><li><p><span class="math inline">\(nums\)</span> 为 <b>无重复元素</b> 的<b>升序</b> 排列数组</p></li><li><p><span class="math inline">\(-10^4 &lt;= target &lt;=10^4\)</span></p></li></ul><hr /><p>以下是题解：</p><h3 id="解题思路">解题思路：</h3><p><span class="math inline">\(O(logn)\)</span>显而易见，是二分查找，模板题了属于是</p><p>代码如下：</p><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="type">int</span> <span class="title">searchInsert</span><span class="params">(vector&lt;<span class="type">int</span>&gt;&amp; nums, <span class="type">int</span> target)</span> </span>&#123;</span><br><span class="line">        <span class="type">int</span> Left = <span class="number">0</span>, Right = nums.<span class="built_in">size</span>() - <span class="number">1</span>, Middle = <span class="number">-1</span>;</span><br><span class="line">        <span class="keyword">while</span> (Left &lt;= Right)</span><br><span class="line">        &#123;</span><br><span class="line">            Middle = (Left + Right) &gt;&gt; <span class="number">1</span>;</span><br><span class="line">            <span class="keyword">if</span> (nums[Middle] == target)</span><br><span class="line">                <span class="keyword">return</span> Middle;</span><br><span class="line">            <span class="keyword">else</span> <span class="keyword">if</span> (nums[Middle] &lt; target)</span><br><span class="line">                Left = Middle + <span class="number">1</span>;</span><br><span class="line">            <span class="keyword">else</span></span><br><span class="line">                Right = Middle - <span class="number">1</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (nums[Middle] &gt; target)</span><br><span class="line">            <span class="keyword">return</span> Middle;</span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">            <span class="keyword">return</span> Middle + <span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure><h4 id="结果">结果</h4><p><a href="https://imgse.com/i/pPcOpeU"><imgsrc="https://s1.ax1x.com/2023/09/10/pPcOpeU.png"alt="pPcOpeU.png" /></a></p><div style="text-align:right;"><p>本篇博客撰写于2023/9/10 22:44:30</p>]]></content>
     
@@ -423,27 +446,6 @@
     
     
     <summary type="html">合并 K 个升序链表</summary>
-    
-    
-    
-    <category term="程序" scheme="https://www.lwt-server.cn/categories/%E7%A8%8B%E5%BA%8F/"/>
-    
-    
-    <category term="LeetCode题解" scheme="https://www.lwt-server.cn/tags/LeetCode%E9%A2%98%E8%A7%A3/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>LeetCode题解——22.括号生成</title>
-    <link href="https://www.lwt-server.cn/2023/08/31/LeetCode_22/"/>
-    <id>https://www.lwt-server.cn/2023/08/31/LeetCode_22/</id>
-    <published>2023-08-31T10:31:21.000Z</published>
-    <updated>2023-08-31T10:39:02.444Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="leetcode题解">LeetCode题解</h1><h2 id="括号生成">括号生成</h2><h3 id="题目预览">题目预览：</h3><p>数字 n代表生成括号的对数，请你设计一个函数，用于能够生成所有可能的并且 有效的括号组合。</p><h4 id="示例-1">示例 1：</h4><blockquote><p><b>输入：</b>n = 3<b>输出：</b>["((()))","(()())","(())()","()(())","()()()"]</p></blockquote><h4 id="示例-2">示例 2：</h4><blockquote><p><b>输入：</b>n = 1 <b>输出：</b>["()"]</p></blockquote><p>提示：</p><ul><li><span class="math inline">\(1 &lt;= n &lt;= 8\)</span></li></ul><hr /><p>以下是题解：</p><h3 id="解题思路">解题思路:</h3><p>本题可以通过记录左、右括号的个数来通过递归实现合法序列的求解。</p><p>代码如下：</p><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    vector&lt;string&gt; ans;</span><br><span class="line">    <span class="function"><span class="type">void</span> <span class="title">Dfs</span><span class="params">(string str,<span class="type">int</span> left,<span class="type">int</span> right)</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(left==<span class="number">0</span>&amp;&amp;right==<span class="number">0</span>)</span><br><span class="line">        &#123;</span><br><span class="line">            ans.<span class="built_in">push_back</span>(str);</span><br><span class="line">            <span class="keyword">return</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span>(left==right) <span class="comment">//剩余左括号与右括号相等，只能使用左括号</span></span><br><span class="line">            <span class="built_in">Dfs</span>(str+<span class="string">&#x27;(&#x27;</span>,left<span class="number">-1</span>,right);</span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">if</span>(left&gt;<span class="number">0</span>)  <span class="comment">//剩余左括号小于右括号，可以使用右括号或左括号</span></span><br><span class="line">                <span class="built_in">Dfs</span>(str+<span class="string">&#x27;(&#x27;</span>,left<span class="number">-1</span>,right);</span><br><span class="line">            <span class="built_in">Dfs</span>(str+<span class="string">&#x27;)&#x27;</span>,left,right<span class="number">-1</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function">vector&lt;string&gt; <span class="title">generateParenthesis</span><span class="params">(<span class="type">int</span> n)</span> </span>&#123;</span><br><span class="line">        <span class="built_in">Dfs</span>(<span class="string">&quot;&quot;</span>,n,n);</span><br><span class="line">        <span class="keyword">return</span> ans;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure><h4 id="结果">结果</h4><p><a href="https://imgse.com/i/pPwXzge"><imgsrc="https://s1.ax1x.com/2023/08/31/pPwXzge.png"alt="pPwXzge.png" /></a></p><div style="text-align:right;"><p>本篇博客撰写于2023/8/31 18:31:21</p>]]></content>
-    
-    
-    <summary type="html">括号生成</summary>
     
     
     
